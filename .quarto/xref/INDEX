@@ -178,5 +178,8 @@
   },
   "books/tomorrowandtomorrowandtomorrow/index.qmd": {
     "index.html": "e768466c"
+  },
+  "bookstats.qmd": {
+    "bookstats.html": "dde1b160"
   }
 }

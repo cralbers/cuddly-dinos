@@ -1,0 +1,89 @@
+---
+title: "book stats"
+format: 
+    html:
+        code-fold: true
+
+---
+
+## 2025 book stats
+
+### genre stats
+```{python}
+#| label: genre-stats
+#| fig-cap: "% fiction and non-fiction reads this year"
+
+import matplotlib.pyplot as plt
+
+# updated 5-12-25
+fiction = 7
+nonfiction = 3
+
+## make pie chart
+labels = ['fiction', 'non-fiction']
+num = [fiction, nonfiction]
+colors = ['#56505d', '#df3a26']
+
+plt.pie(num, labels=labels, colors=colors, autopct='%1.0f%%')
+plt.show()
+```
+
+
+### books by month
+```{python}
+
+import matplotlib.pyplot as plt
+import pandas as pd
+import seaborn as sns
+import plotly.express as px
+
+
+months = ['jan 25', 'feb 25', 'mar 25', 'apr 25', 'may 25']
+counts = [1, 2, 1, 5, 1]
+
+d = {'month': months, 'books': counts}
+
+
+df = pd.DataFrame(data=d)
+
+
+# fig, ax = plt.subplots()
+# ax.plot(months, counts, '#df3a26', **{'marker': 'o'})
+# ax.set_xlabel('month')
+# ax.set_ylabel('# books read')
+# plt.show()
+
+fig = px.line(df, x="month", y="books", title='books read by month', markers=True)
+fig.show()
+
+```
+
+## all time stats 
+all time meaning the whole time i have been tracking this nerd shit
+### all time books by month
+
+```{python}
+import matplotlib.pyplot as plt
+import pandas as pd
+import seaborn as sns
+import plotly.express as px
+
+
+months = ['jan 24', 'feb 24', 'mar 24', 'apr 24', 'may 24', 'jun 24', 'jul 24', 'aug 24', 'sep 24', 'oct 24', 'nov 24', 'dec 24', 'jan 25', 'feb 25', 'mar 25', 'apr 25', 'may 25']
+counts = [5, 4, 3, 3, 2, 1, 0, 0, 1, 3, 1, 3, 1, 2, 1, 5, 1]
+
+d = {'month': months, 'books': counts}
+
+
+df = pd.DataFrame(data=d)
+
+
+# fig, ax = plt.subplots()
+# ax.plot(months, counts, '#df3a26', **{'marker': 'o'})
+# ax.set_xlabel('month')
+# ax.set_ylabel('# books read')
+# plt.show()
+
+fig = px.line(df, x="month", y="books", title='books read by month', markers=True)
+fig.show()
+```

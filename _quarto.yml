@@ -9,6 +9,8 @@ website:
       - href: index.qmd
         text: home
       - books.qmd
+      - href: bookstats.qmd
+        text: book stats
       - about.qmd
 
 format:
