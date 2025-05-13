@@ -3,3 +3,31 @@ title: "bucket"
 ---
 
 here's a bunch of stuff that is floating around in the bucket of my brain
+
+## 2025 book stats
+
+### genre stats
+```{python}
+#| label: genre-stats
+#| fig-cap: "% fiction and non-fiction reads this year"
+
+import matplotlib.pyplot as plt
+
+# updated 5-12-25
+fiction = 7
+nonfiction = 3
+
+## make pie chart
+labels = ['fiction', 'non-fiction']
+num = [fiction, nonfiction]
+colors = ['#56505d', '#df3a26']
+
+plt.pie(num, labels=labels, colors=colors, autopct='%1.0f%%')
+plt.show()
+```
+
+### books by month
+
+```{python}
+
+```

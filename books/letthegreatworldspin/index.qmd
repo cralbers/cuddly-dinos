@@ -2,7 +2,7 @@
 title: "Let the Great World Spin / Colum McCann"
 date: 2024-12-01T21:59:50-05:00
 draft: false
-
+image: world.jpg
 categories:
 - fiction
 - abc24

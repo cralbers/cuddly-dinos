@@ -5,7 +5,6 @@ draft: false
 
 categories:
   - 52books23
-  - books
   - fiction
 ---
 
