@@ -2,11 +2,8 @@
 title: Cloud Atlas / David Mitchell
 date: 2023-04-21T11:07:49-07:00
 draft: false
-series:
-  - null
+
 categories:
-  - books
-tags:
   - 52books23
   - fiction
 ---

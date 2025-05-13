@@ -2,11 +2,8 @@
 title: "Harry Potter / J.K. Rowling"
 date: 2023-11-05T20:03:15-05:00
 draft: false
-series:
-- 
-categories: 
-- books
-tags:
+
+categories:
 - fiction
 ---
 

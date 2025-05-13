@@ -2,11 +2,8 @@
 title: "The Boys in the Boat / Daniel James Brown"
 date: 2024-04-28T18:20:49-04:00
 draft: false
-series: 
-- 
-categories: 
-- books
-tags:
+
+categories:
 - non-fiction
 - biography
 - 52books24

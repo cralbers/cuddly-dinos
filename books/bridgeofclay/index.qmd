@@ -2,11 +2,8 @@
 title: "Bridge of Clay / Marcus Zusak"
 date: 2023-11-08T22:50:30-05:00
 draft: false
-series: 
-- 
-categories: 
-- books
-tags:
+
+categories:
 - fiction
 - favorites
 ---

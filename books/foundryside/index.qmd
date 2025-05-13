@@ -2,11 +2,8 @@
 title: "Foundryside / Robert Jackson Bennett"
 date: 2024-12-01T21:53:05-05:00
 draft: false
-series: 
-- 
-categories: 
-- books
-tags:
+
+categories:
 - fiction
 - abc24
 - 52books24

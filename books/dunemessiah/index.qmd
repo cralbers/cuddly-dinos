@@ -2,11 +2,8 @@
 title: "Dune Messiah / Frank Herbert"
 date: 2024-05-05T21:48:13-04:00
 draft: false
-series: 
-- 
-categories: 
-- books
-tags:
+
+categories:
 - fiction
 - 52books24
 ---
