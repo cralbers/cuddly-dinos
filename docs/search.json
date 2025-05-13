@@ -410,6 +410,13 @@
     "href": "index.html#book-stats",
     "title": "bucket",
     "section": "2025 book stats",
-    "text": "2025 book stats\n\ngenre stats\n\nimport matplotlib.pyplot as plt\n\n# updated 5-12-25\nfiction = 7\nnonfiction = 3\n\n## make pie chart\nlabels = ['fiction', 'non-fiction']\nnum = [fiction, nonfiction]\ncolors = ['#56505d', '#df3a26']\n\nplt.pie(num, labels=labels, colors=colors, autopct='%1.0f%%')\nplt.show()\n\n\n\n\n% fiction and non-fiction reads this year"
+    "text": "2025 book stats\n\ngenre stats\n\n\nCode\nimport matplotlib.pyplot as plt\n\n# updated 5-12-25\nfiction = 7\nnonfiction = 3\n\n## make pie chart\nlabels = ['fiction', 'non-fiction']\nnum = [fiction, nonfiction]\ncolors = ['#56505d', '#df3a26']\n\nplt.pie(num, labels=labels, colors=colors, autopct='%1.0f%%')\nplt.show()\n\n\n\n\n\n% fiction and non-fiction reads this year\n\n\n\n\n\n\nbooks by month\n\n\nCode\nimport matplotlib.pyplot as plt\nimport pandas as pd\nimport seaborn as sns\nimport plotly.express as px\n\n\nmonths = ['jan 25', 'feb 25', 'mar 25', 'apr 25', 'may 25']\ncounts = [1, 2, 1, 5, 1]\n\nd = {'month': months, 'books': counts}\n\n\ndf = pd.DataFrame(data=d)\n\n\n# fig, ax = plt.subplots()\n# ax.plot(months, counts, '#df3a26', **{'marker': 'o'})\n# ax.set_xlabel('month')\n# ax.set_ylabel('# books read')\n# plt.show()\n\nfig = px.line(df, x=\"month\", y=\"books\", title='books read by month', markers=True)\nfig.show()"
+  },
+  {
+    "objectID": "index.html#all-time-stats",
+    "href": "index.html#all-time-stats",
+    "title": "bucket",
+    "section": "all time stats",
+    "text": "all time stats\nall time meaning the whole time i have been tracking this nerd shit ### all time books by month\n\n\nCode\nimport matplotlib.pyplot as plt\nimport pandas as pd\nimport seaborn as sns\nimport plotly.express as px\n\n\nmonths = ['jan 24', 'feb 24', 'mar 24', 'apr 24', 'may 24', 'jun 24', 'jul 24', 'aug 24', 'sep 24', 'oct 24', 'nov 24', 'dec 24', 'jan 25', 'feb 25', 'mar 25', 'apr 25', 'may 25']\ncounts = [5, 4, 3, 3, 2, 1, 0, 0, 1, 3, 1, 3, 1, 2, 1, 5, 1]\n\nd = {'month': months, 'books': counts}\n\n\ndf = pd.DataFrame(data=d)\n\n\n# fig, ax = plt.subplots()\n# ax.plot(months, counts, '#df3a26', **{'marker': 'o'})\n# ax.set_xlabel('month')\n# ax.set_ylabel('# books read')\n# plt.show()\n\nfig = px.line(df, x=\"month\", y=\"books\", title='books read by month', markers=True)\nfig.show()"
   }
 ]
