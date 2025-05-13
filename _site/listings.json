@@ -1,0 +1,18 @@
+[
+  {
+    "listing": "/posts.html",
+    "items": []
+  },
+  {
+    "listing": "/books.html",
+    "items": [
+      "/books/tomlake/index.html",
+      "/books/babel/index.html",
+      "/books/americangods/index.html",
+      "/books/beantrees/index.html",
+      "/books/acomaf/index.html",
+      "/books/acotar/index.html",
+      "/books/becoming/index.html"
+    ]
+  }
+]

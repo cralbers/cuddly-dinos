@@ -1,0 +1,22 @@
+project:
+  type: website
+
+website:
+  title: "bucket"
+  navbar:
+    left:
+      - href: index.qmd
+        text: home
+      - books.qmd
+      - about.qmd
+
+format:
+  html:
+    theme:
+      - morph
+      # - sketchy
+    css: styles.css
+    toc: true
+
+
+

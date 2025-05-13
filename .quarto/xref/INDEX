@@ -1,0 +1,38 @@
+{
+  "index.qmd": {
+    "index.html": "323baae1"
+  },
+  "about.qmd": {
+    "about.html": "a8c2a57e"
+  },
+  "posts.qmd": {
+    "posts.html": "70236c8e"
+  },
+  "books.qmd": {
+    "books.html": "8c86cb51"
+  },
+  "books/20240303_tomlake/index.qmd": {
+    "index.html": "ed42e36a"
+  },
+  "books/acomaf/index.qmd": {
+    "index.html": "23d63c89"
+  },
+  "books/tomlake/index.qmd": {
+    "index.html": "020749df"
+  },
+  "books/acotar/index.qmd": {
+    "index.html": "d973c299"
+  },
+  "books/babel/index.qmd": {
+    "index.html": "333629b2"
+  },
+  "books/americangods/index.qmd": {
+    "index.html": "4edbe73c"
+  },
+  "books/becoming/index.qmd": {
+    "index.html": "9984fad3"
+  },
+  "books/beantrees/index.qmd": {
+    "index.html": "8c9c1373"
+  }
+}
