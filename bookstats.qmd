@@ -11,9 +11,12 @@ format:
 ### genre stats
 ```{python}
 #| label: genre-stats
-#| fig-cap: "% fiction and non-fiction reads this year"
 
 import matplotlib.pyplot as plt
+import pandas as pd
+import plotly.express as px
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
 
 # updated 5-12-25
 fiction = 7
@@ -21,11 +24,43 @@ nonfiction = 3
 
 ## make pie chart
 labels = ['fiction', 'non-fiction']
-num = [fiction, nonfiction]
+genre_num = [fiction, nonfiction]
 colors = ['#56505d', '#df3a26']
+colors2 = ['gold', 'mediumturquoise', 'darkorange', 'lightgreen']
+d1 = {'genre': labels, 'books': genre_num}
+genre_df = pd.DataFrame(data=d1)
+# fig = px.pie(genre_df, values='books', names='genre')
 
-plt.pie(num, labels=labels, colors=colors, autopct='%1.0f%%')
-plt.show()
+
+
+## make bar chart of books by month
+months = ['jan 25', 'feb 25', 'mar 25', 'apr 25', 'may 25']
+counts = [1, 2, 1, 5, 1]
+d = {'month': months, 'books': counts}
+df = pd.DataFrame(data=d)
+
+
+
+# fig, (ax1, ax2) = plt.subplots(1, 2)
+
+
+# ax2 = px.line(df, x="month", y="books", title='books read by month', markers=True)
+# fig.show()
+
+
+fig = make_subplots(rows=1, cols=2, subplot_titles=("genre breakdown", "books read per month"), specs=[[{"type": "pie"}, {"type": "xy"}]])
+fig.add_trace(go.Pie(values = genre_num, labels = labels), row = 1, col = 1)
+fig.update_traces(hoverinfo='label+percent', textinfo='value', textfont_size=20,
+                  marker=dict(colors=colors2, line=dict(color='#000000', width=2)))
+fig.add_trace(
+    go.Scatter(x=months, y=counts),
+    row=1, col=2
+)
+fig.update_layout(height=500, showlegend=False)
+fig.show()
+
+
+
 ```
 
 
@@ -60,6 +95,7 @@ fig.show()
 
 ## all time stats 
 all time meaning the whole time i have been tracking this nerd shit
+
 ### all time books by month
 
 ```{python}
