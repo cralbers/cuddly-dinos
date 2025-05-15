@@ -7,3 +7,6 @@ format:
 
 here's a bunch of stuff that is floating around in the bucket of my brain
 
+| [ ![books](_img/books.png) ]( books.qmd ) | [ ![stats](_img/stats.png) ]( bookstats.qmd ) | [ ![music](_img/ipod.png) ]( music.qmd ) |
+|:------------------------------------------:|:---------------------------------------------------:|:-----------------------------------------------:|
+|                    books                   |                        stats                        |                      music                      |

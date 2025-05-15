@@ -181,5 +181,104 @@
   },
   "bookstats.qmd": {
     "bookstats.html": "dde1b160"
+  },
+  "books/goingclear/index.qmd": {
+    "index.html": "f3b65a39"
+  },
+  "books/thefury/index.qmd": {
+    "index.html": "64ba05d5"
+  },
+  "books/libbylostandfound/index.qmd": {
+    "index.html": "31ebd525"
+  },
+  "books/nexus/index.qmd": {
+    "index.html": "4b03b20f"
+  },
+  "books/thefivepeopleyoumeetinheaven/index.qmd": {
+    "index.html": "7d01f227"
+  },
+  "books/shantaram/index.qmd": {
+    "index.html": "c9370e1c"
+  },
+  "books/hiddenfigures/index.qmd": {
+    "index.html": "93716312"
+  },
+  "music.qmd": {
+    "music.html": "dea07836"
+  },
+  "music/songs_6_032023.md": {
+    "songs_6_032023.html": "3760e80c"
+  },
+  "music/songs_1_020623.md": {
+    "songs_1_020623.html": "af6fe043"
+  },
+  "music/songs_2_021423.md": {
+    "songs_2_021423.html": "63cd084d"
+  },
+  "music/songs_3_022423.md": {
+    "songs_3_022423.html": "27b004fd"
+  },
+  "music/songs_4_022723.md": {
+    "songs_4_022723.html": "05df35b1"
+  },
+  "music/top10songs_043025.md": {
+    "top10songs_043025.html": "ae5413ef"
+  },
+  "music/songs_5_031823.md": {
+    "songs_5_031823.html": "1d037fae"
+  },
+  "music/songs_14_032124.md": {
+    "songs_14_032124.html": "144806b0"
+  },
+  "music/top10songs_120124.md": {
+    "top10songs_120124.html": "a3c0875a"
+  },
+  "music/songs_15_041224.md": {
+    "songs_15_041224.html": "63e880c7"
+  },
+  "music/top10songs_120223.md": {
+    "top10songs_120223.html": "2c564729"
+  },
+  "music/top10songs_122923.md": {
+    "top10songs_122923.html": "e185ce9f"
+  },
+  "music/top10songs_030324.md": {
+    "top10songs_030324.html": "364cd840"
+  },
+  "music/songs_8_032923.md": {
+    "songs_8_032923.html": "e16b9d7c"
+  },
+  "music/songs_13_012024.md": {
+    "songs_13_012024.html": "9e655d2c"
+  },
+  "music/songs_17_052124.md": {
+    "songs_17_052124.html": "c4a8baa7"
+  },
+  "music/songs_11_110523.md": {
+    "songs_11_110523.html": "ae2f6ac7"
+  },
+  "music/songs_7_032223.md": {
+    "songs_7_032223.html": "10962b39"
+  },
+  "music/top10songs_053124.md": {
+    "top10songs_053124.html": "d460cb16"
+  },
+  "music/songs_16_042324.md": {
+    "songs_16_042324.html": "69574dbc"
+  },
+  "music/songs_12_112723.md": {
+    "songs_12_112723.html": "002d377b"
+  },
+  "music/songs_9_041523.md": {
+    "songs_9_041523.html": "32066f53"
+  },
+  "music/top10songs_033124.md": {
+    "top10songs_033124.html": "f520e0b6"
+  },
+  "music/top10songs_050124.md": {
+    "top10songs_050124.html": "843894e9"
+  },
+  "music/songs_10_071923.md": {
+    "songs_10_071923.html": "d888a861"
   }
 }

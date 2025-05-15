@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - _img
 
 website:
   title: "bucket"
@@ -11,7 +13,10 @@ website:
       - books.qmd
       - href: bookstats.qmd
         text: book stats
+      - href: music.qmd
+        text: music
       - about.qmd
+
 
 format:
   html:
