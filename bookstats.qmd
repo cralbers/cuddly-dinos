@@ -3,16 +3,14 @@ title: "book stats"
 format: 
     html:
         code-fold: true
-
 ---
 
 ## 2025 book stats
 
 total books read: 14
 
-
-
 ### some silly graphs
+
 ```{python}
 #| label: genre-stats
 
@@ -25,6 +23,10 @@ from plotly.subplots import make_subplots
 # updated 5-12-25
 fiction = 7
 nonfiction = 3
+abc_read = 6
+abc_unread = 20 
+fivetwo_read = 6
+fivetwo_unread = 46
 
 ## make fic/non-fic pie chart 
 genre_labels = ['fiction', 'non-fiction']
@@ -36,8 +38,7 @@ genre_df = pd.DataFrame(data=d1)
 # fig = px.pie(genre_df, values='books', names='genre')
 
 ## make abcs pie chart
-abc_read = 6
-abc_unread = 20 
+
 abc_labels = ['read', 'unread']
 abc_num = [abc_read, abc_unread]
 colors = ['#56505d', '#df3a26']
@@ -46,8 +47,7 @@ abc_colors3 = ['darkorange', 'lightgreen']
 
 
 ## make 52books pie chart
-fivetwo_read = 6
-fivetwo_unread = 46
+
 fivetwo_labels = ['read', 'unread']
 fivetwo_num = [fivetwo_read, fivetwo_unread]
 colors = ['#56505d', '#df3a26']
@@ -102,52 +102,45 @@ fig.show()
 
 ```
 
-
-
-
-
 ### abcs 2025
+
 reading the alphabet
 
-| abcs 25 |   |
-|---------|---|
-|    a    |   |
-|    b    |   |
-|    c    |   |
-|    d    |   |
-|    e    |   |
-|    f    |   |
-|    g    |[ Going Clear ](books/goingclear/index.qmd)   |
-|    h    |[ Hidden Figures ](books/hiddenfigures/index.qmd)   |
-|    i    |   |
-|    j    |   |
-|    k    |   |
-|    l    |[ Libby Lost and Found ](books/libbylostandfound/index.qmd)   |
-|    m    |[ Migrations ](books/migrations/index.qmd)   |
-|    n    |[ Nexus ](books/nexus/index.qmd)   |
-|    o    |   |
-|    p    |   |
-|    q    |   |
-|    r    |   |
-|    s    |[ Shantaram ](books/shantaram/index.qmd)   |
-|    t    |   |
-|    u    |   |
-|    v    |   |
-|    w    |   |
-|    x    |   |
-|    y    |   |
-|    z    |   |
-
-
-
-
+| abcs 25 |                                                           |
+|---------|-----------------------------------------------------------|
+| a       |                                                           |
+| b       |                                                           |
+| c       |                                                           |
+| d       |                                                           |
+| e       |                                                           |
+| f       |                                                           |
+| g       | [Going Clear](books/goingclear/index.qmd)                 |
+| h       | [Hidden Figures](books/hiddenfigures/index.qmd)           |
+| i       |                                                           |
+| j       |                                                           |
+| k       |                                                           |
+| l       | [Libby Lost and Found](books/libbylostandfound/index.qmd) |
+| m       | [Migrations](books/migrations/index.qmd)                  |
+| n       | [Nexus](books/nexus/index.qmd)                            |
+| o       |                                                           |
+| p       |                                                           |
+| q       |                                                           |
+| r       |                                                           |
+| s       | [Shantaram](books/shantaram/index.qmd)                    |
+| t       |                                                           |
+| u       |                                                           |
+| v       |                                                           |
+| w       |                                                           |
+| x       |                                                           |
+| y       |                                                           |
+| z       |                                                           |
 
 ### 52 books challenge 2025
 
 | prompt                                    | book |
 |-------------------------------------------|------|
-| 1. A pun in the title                     |      |
-| 2. A character with red hair              |      |
+| 1\. A pun in the title                    |      |
+| 2\. A character with red hair             |      |
 | Title starts with letter “M”              |      |
 | Title starts with letter “N”              |      |
 | Plot includes a heist                     |      |
@@ -199,10 +192,10 @@ reading the alphabet
 | 300-400 pages long                        |      |
 | Published in 2025                         |      |
 
+## all time stats
 
-
-## all time stats 
-check them out here -> [all time stats](alltimebookstats.qmd)
+check them out here -\> [all time stats](alltimebookstats.qmd)
 
 ## last year
-[ 2024 reading ](2024reading.md)
+
+[2024 reading](2024reading.md)
