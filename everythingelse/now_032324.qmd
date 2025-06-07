@@ -1,0 +1,19 @@
+---
+title: "things i'm thinking about right now"
+date: 2024-03-23T21:26:12-04:00
+draft: false
+
+categories: 
+- now
+
+---
+- this \
+![alt](/images/text1.png)
+- how everytime i start somewhere new, i think things will be different and i will be braver or something but things end up the same anyways
+- Til Kingdom Come by Coldplay
+- that i have 3 books going right now and have 0 will to finish any of them
+- how i used to feel this heavy all the time but now i only feel it sometimes and how good that is
+- my hands are so cold
+
+
+[previous now]({{< ref "now_012324.md" >}})

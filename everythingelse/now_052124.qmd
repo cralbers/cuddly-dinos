@@ -1,0 +1,20 @@
+---
+title: "things i'm thinking about right now"
+date: 2024-05-21T20:54:03-04:00
+draft: false
+
+categories: 
+- now
+
+---
+- mama putting her crocs in the dishwasher
+- the sleeping puppies
+- getting an apartment in columbus
+- having to find a new gym in columbus
+- having to make friends in columbus
+- how much i have trouble making friends
+- how difficult it is to have to learn something from scratch
+- scared
+- sketch and caleb pressley [video](https://www.youtube.com/watch?v=cigru9WYvwI)
+
+[previous now]({{< ref "now_033124.md" >}})

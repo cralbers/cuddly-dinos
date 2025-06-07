@@ -1,6 +1,5 @@
 ---
 title: "2024 books"
-description: null
 draft: false
 ---
 
@@ -93,4 +92,4 @@ Z.
 
 
 ### last year
-[ 2023 reading ]({{< ref "2023reading.md" >}})
+[ 2023 reading ](2023reading.qmd)

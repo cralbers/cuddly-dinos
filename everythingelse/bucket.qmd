@@ -1,0 +1,17 @@
+---
+title: bucket list
+date: 2023-12-03T16:14:34-05:00
+draft: false
+
+categories:
+    - info
+
+---
+## things i want to do to fill myself up
+- learn <!-- FM:Snippet:Start data:{"id":"link to file","fields":[{"name":"title","value":"sign language"},{"name":"file","value":"signlanguage"}]} -->
+[ sign language ]({{< ref "signlanguage.md" >}})
+- learn to play the drums
+- swim with sharks
+- fall in love
+- feel cool
+- get some rest

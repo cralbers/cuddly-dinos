@@ -1,0 +1,36 @@
+---
+title: "books to read"
+draft: false
+
+categories: 
+- books
+
+type: base
+---
+- [ ] matchmaking for beginners - maddie dawson
+- [ ] bowlaway - elizabeth mccracken
+- [ ] the electric woman - tessa fontaine
+- [ ] the high desert - james spooner
+- [ ] bravo company - ben kesling 
+- [ ] empire falls - richard russo
+- [ ] all adults here - emma straub 
+- [ ] the breaking of eggs - jim powell
+- [ ] the lager queen of minnesota - j ryan stradal 
+- [x] tom lake - ann patchett
+- [ ] shark heart - emily habeck
+- [ ] the long way to a small angry planet - becky chambers
+- [ ] the secret lives of country gentlemen - k.j. charles
+- [ ] love theoretically - ali hazelwood
+- [ ] house of trelawney - hannah rothschild 
+- [ ] arundhati roy (author)
+- [ ] funny you should ask - elissa sussman 
+- [ ] american psycho - bret easton ellis
+- [x] the dictionary of lost words - pip williams
+- [ ] the end - anders nilsen
+
+
+
+
+
+
+last updated 3/3/24

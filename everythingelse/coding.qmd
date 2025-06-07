@@ -1,0 +1,14 @@
+---
+title: "coding resources"
+date: 2023-11-06T20:18:26-05:00
+draft: false
+series:
+- 
+categories: 
+- coding
+---
+
+**General Resources**
+- https://flaviocopes.com/
+- 
+**Static Site Generators**

@@ -1,0 +1,14 @@
+---
+title: "some crap i want to try out for myself "
+date: 2024-01-26T00:11:19-05:00
+draft: false
+
+categories: 
+- info
+
+---
+- setting up my own compendium cards 
+  - [about compendium cards](https://thecompendium.cards/c/about/)
+  - my digi garden resource list [ here ]({{< ref "digital_garden_tools.md" >}})
+  - link to github to fork [here](https://github.com/jkomoros/card-web)
+- 

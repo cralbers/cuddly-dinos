@@ -1,0 +1,13 @@
+---
+title: "things i'm thinking about right now"
+date: 2023-11-05T21:43:30-05:00
+draft: false
+
+categories: 
+- now
+
+---
+
+i don't know anything really
+
+[previous now]({{< ref "now_041623.md" >}})

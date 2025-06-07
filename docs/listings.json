@@ -2,6 +2,9 @@
   {
     "listing": "/books.html",
     "items": [
+      "/books/theinvisiblemountain/index.html",
+      "/books/talkingatnight/index.html",
+      "/books/withoutyouthereisnous/index.html",
       "/books/hiddenfigures/index.html",
       "/books/thefivepeopleyoumeetinheaven/index.html",
       "/books/goingclear/index.html",
@@ -64,6 +67,33 @@
       "/books/whatthefirefliesknew/index.html",
       "/books/tomorrowandtomorrowandtomorrow/index.html",
       "/books/belcanto/index.html"
+    ]
+  },
+  {
+    "listing": "/everythingelse.html",
+    "items": [
+      "/everythingelse/bookstoread.html",
+      "/everythingelse/currrentlyreading.html",
+      "/everythingelse/now_120124.html",
+      "/everythingelse/now_052124.html",
+      "/everythingelse/now_033124.html",
+      "/everythingelse/now_032324.html",
+      "/everythingelse/thingstotry.html",
+      "/everythingelse/now_012324.html",
+      "/everythingelse/2024thoughts.html",
+      "/everythingelse/now_121623.html",
+      "/everythingelse/bookstoreread.html",
+      "/everythingelse/signlanguage.html",
+      "/everythingelse/bucket.html",
+      "/everythingelse/websites.html",
+      "/everythingelse/now_112623.html",
+      "/everythingelse/now_111023.html",
+      "/everythingelse/coding.html",
+      "/everythingelse/now_110623.html",
+      "/everythingelse/f1.html",
+      "/everythingelse/now_110523.html",
+      "/everythingelse/now_041623.html",
+      "/everythingelse/movies.html"
     ]
   },
   {

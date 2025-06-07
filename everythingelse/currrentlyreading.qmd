@@ -1,0 +1,18 @@
+---
+title: Currently Reading and Up Next
+draft: false
+
+categories:
+    - books
+
+type: base
+---
+### currently reading: 
+- American Prometheus / Kai Bird and Martin J. Sherwin
+- The God of Small Things / Arundhati Roy
+- The Perfect Storm / Sebastian Junger
+
+### up next (hopefully):
+- Unbroken / Laura Hillenbrand
+
+

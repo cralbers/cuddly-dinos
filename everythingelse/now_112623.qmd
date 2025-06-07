@@ -1,0 +1,18 @@
+---
+title: "things i'm thinking about right now"
+date: 2023-11-26T23:52:46-05:00
+draft: false
+
+categories: 
+- now
+
+---
+- all fiction has at least an ounce of truth
+- how to have a journaling habit that is consistent but not intrusive and also one that i won't give up on
+- keeping my duolingo streak
+- wishing i was a polyglot but settling for duolingo
+- also wishing that i could read and remember like (good) will hunting (if you don't understand that reference grow up)
+- bababooey
+- how stupid git makes me feel because i think if i really took some time to sit down and learn about it it would make sense but i won't and will suffer in stupidity instead
+
+[previous now]({{< ref "now_111023.md" >}})

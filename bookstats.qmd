@@ -20,13 +20,15 @@ import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-# updated 5-12-25
-fiction = 7
-nonfiction = 3
-abc_read = 6
-abc_unread = 20 
-fivetwo_read = 6
-fivetwo_unread = 46
+# updated 6-6-25
+fiction = 10
+nonfiction = 4
+
+abc_read = 8
+abc_unread = 26 - abc_read
+
+fivetwo_read = 7
+fivetwo_unread = 52 - fivetwo_read
 
 ## make fic/non-fic pie chart 
 genre_labels = ['fiction', 'non-fiction']
@@ -56,8 +58,8 @@ fivetwo_colors3 = ['#FE621D', '#DBB1BC']
 
 
 ## make bar chart of books by month
-months = ['jan 25', 'feb 25', 'mar 25', 'apr 25', 'may 25']
-counts = [1, 2, 1, 5, 1]
+months = ['jan 25', 'feb 25', 'mar 25', 'apr 25', 'may 25', 'jun 25']
+counts = [1, 2, 1, 5, 4, 1]
 d = {'month': months, 'books': counts}
 df = pd.DataFrame(data=d)
 
@@ -127,10 +129,10 @@ reading the alphabet
 | q       |                                                           |
 | r       |                                                           |
 | s       | [Shantaram](books/shantaram/index.qmd)                    |
-| t       |                                                           |
+| t       | [Talking at Night](books/talkingatnight/index.qmd)         |
 | u       |                                                           |
 | v       |                                                           |
-| w       |                                                           |
+| w       | [Without You There Is No Us](books/withoutyouthereisnous/index.qmd)   |
 | x       |                                                           |
 | y       |                                                           |
 | z       |                                                           |
@@ -141,56 +143,56 @@ reading the alphabet
 |-------------------------------------------|------|
 | 1\. A pun in the title                    |      |
 | 2\. A character with red hair             |      |
-| Title starts with letter “M”              |      |
-| Title starts with letter “N”              |      |
-| Plot includes a heist                     |      |
-| Genre One: Set in Spring                  |      |
-| Genre Two: Set in Summer                  |      |
-| Genre Three: Set in Autumn                |      |
-| Genre Four: Set in Winter                 |      |
-| Author’s last name is also a first name   |      |
-| A prequel                                 |      |
-| Has a moon on the cover                   |      |
-| Title is ten letters or less              |      |
-| Climate fiction                           |      |
-| Includes Latin American history           |      |
-| Author has won an Edgar award             |      |
-| Told in verse                             |      |
-| A character who can fly                   |      |
-| Has short chapters                        |      |
-| A fairy tale retelling                    |      |
-| Character’s name in the title             |      |
-| Found family trope                        |      |
-| A sprayed edge                            |      |
-| Title is a spoiler                        |      |
-| Breaks the fourth wall                    |      |
-| More than a million copies sold           |      |
-| Features a magician                       |      |
-| A crossover (Set in a shared universe)    |      |
-| Shares universe with prompt 28            |      |
-| In the public domain                      |      |
-| Audiobook has multiple narrators          |      |
-| Includes a diary entry                    |      |
-| A standalone novel                        |      |
-| Direction in the title                    |      |
-| Written in third person                   |      |
-| Final sentence is less than 6 words long  |      |
-| Genre chosen for you by someone else      |      |
-| An adventure story                        |      |
-| Has an epigraph                           |      |
-| Stream of consciousness narrative         |      |
-| Cover font is in a primary color          |      |
-| Non-human antagonist                      |      |
-| Explores social class                     |      |
-| A celebrity on the cover                  |      |
-| Author releases more than one book a year |      |
-| Read in a “-ber” month                    |      |
-| “I think it was blue”                     |      |
-| Related to the word “puzzle”              |      |
-| Set in a country with an active volcano   |      |
-| Set in the 1940s                          |      |
-| 300-400 pages long                        |      |
-| Published in 2025                         |      |
+| 3. Title starts with letter “M”              |      |
+| 4. Title starts with letter “N”              | [Nexus](books/nexus/index.qmd)     |
+| 5. Plot includes a heist                     |      |
+| 6. Genre One: Set in Spring                  |      |
+| 7. Genre Two: Set in Summer                  |      |
+| 8. Genre Three: Set in Autumn                |      |
+| 9. Genre Four: Set in Winter                 |      |
+| 10. Author’s last name is also a first name   |      |
+| 11. A prequel                                 |      |
+| 12. Has a moon on the cover                   |      |
+| 13. Title is ten letters or less              | [Shantaram](books/shantaram/index.qmd)     |
+| 14. Climate fiction                           | [Migrations](books/migrations/index.qmd)     |
+| 15. Includes Latin American history           | [The Invisible Mountain](books/theinvisiblemountain/index.qmd)     |
+| 16. Author has won an Edgar award             |      |
+| 17. Told in verse                             |      |
+| 18. A character who can fly                   |      |
+| 19. Has short chapters                        |      |
+| 20. A fairy tale retelling                    |      |
+| 21. Character’s name in the title             | [Libby Lost and Found](books/libbylostandfound/index.qmd)      |
+| 22. Found family trope                        |      |
+| 23. A sprayed edge                            |      |
+| 24. Title is a spoiler                        |      |
+| 25. Breaks the fourth wall                    |      |
+| 26. More than a million copies sold           |      |
+| 27. Features a magician                       |      |
+| 28. A crossover (Set in a shared universe)    |      |
+| 29. Shares universe with prompt 28            |      |
+| 30. In the public domain                      |      |
+| 31. Audiobook has multiple narrators          |      |
+| 32. Includes a diary entry                    |      |
+| 33. A standalone novel                        | [The Fury](books/thefury/index.qmd)     |
+| 34. Direction in the title                    |      |
+| 35. Written in third person                   |      |
+| 36. Final sentence is less than 6 words long  |      |
+| 37. Genre chosen for you by someone else      |      |
+| 38. An adventure story                        |      |
+| 39. Has an epigraph                           |      |
+| 40. Stream of consciousness narrative         |      |
+| 41. Cover font is in a primary color          | [Hidden Figures](books/hiddenfigures/index.qmd)      |
+| 42. Non-human antagonist                      |      |
+| 43. Explores social class                     |      |
+| 44. A celebrity on the cover                  |      |
+| 45. Author releases more than one book a year |      |
+| 46. Read in a “-ber” month                    |      |
+| 47. “I think it was blue”                     |      |
+| 48. Related to the word “puzzle”              |      |
+| 49. Set in a country with an active volcano   |      |
+| 50. Set in the 1940s                          |      |
+| 51. 300-400 pages long                        |      |
+| 52. Published in 2025                         |      |
 
 ## all time stats
 
@@ -198,4 +200,4 @@ check them out here -\> [all time stats](alltimebookstats.qmd)
 
 ## last year
 
-[2024 reading](2024reading.md)
+[2024 reading](2024reading.qmd)

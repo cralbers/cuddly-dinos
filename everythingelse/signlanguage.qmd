@@ -1,0 +1,22 @@
+---
+title: "sign language"
+date: 2023-12-03T16:19:13-05:00
+draft: false
+
+categories: 
+- info
+- asl
+---
+
+## asl courses near me
+- [cleveland state community college](https://www.ed2go.com/clscc/online-courses/learn-sign-language/)
+  - self paced and instructor options
+  - $115
+- [cleveland hearing and speech center](https://www.chsc.org/community-center-for-the-deaf-hard-of-hearing/sign-language-classes/)
+  - on zoom (i think)
+  - 10 weeks, once a wk
+  - $155 
+- [st. augustine catholic church](https://www.staugustinecleveland.org/bulletins)
+  - check bulletin
+  - as of 12/03/23, have beginner classes Thursdays at 2:30 pm
+  - free

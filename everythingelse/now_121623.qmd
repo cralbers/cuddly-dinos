@@ -1,0 +1,17 @@
+---
+title: "things i'm thinking about right now"
+date: 2023-12-16T10:18:06-05:00
+draft: false
+
+categories: 
+- now
+
+---
+
+- do i have small dreams, or big dreams that are just small sentences?
+- trying to convince myself that losing that job offer doesn't mean that people won't ever think i'm cool or that i won't ever have a job that i think is cool or one that fills me up
+- panicking about christmas presents
+- country music
+- how hard it can be sometimes to have sisters
+
+[previous now]({{< ref "now_112623.md" >}})

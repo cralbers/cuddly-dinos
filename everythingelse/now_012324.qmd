@@ -1,0 +1,21 @@
+---
+title: "things i'm thinking about right now"
+date: 2024-01-23T21:18:18-05:00
+draft: false
+
+categories: 
+- now
+
+---
+
+- the song I DID IT by DJ Khaled
+- thinking i have to reject this lab job because it is the basement and there are 4 people in the lab and i would want to punch a wall everyday because of pcr but also am i dumb for doing that?
+- ginny eating tv remotes and dog food out of the special felt trash can
+- the withering leaves on my avocado tree
+- making gianormous chocolate chip cookies
+- having to go to work at 9 am (mostly just frustrated because i can't go to 9 am crossfit)
+- [my new gym backpack](https://builtforathletes.com/products/small-black-25l-gym-backpack) :))) 
+
+
+
+[previous now]({{< ref "now_121623.md" >}})

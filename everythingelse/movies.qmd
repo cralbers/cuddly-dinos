@@ -1,0 +1,22 @@
+---
+title: "movies (w)"
+date: 2023-03-31T19:45:08-07:00
+draft: false
+
+categories: 
+ - movies
+ - favorites
+---
+
+a list of movies that are integral to my personality and directly determine my friendships:
+
+- the kings of summer
+- good will hunting
+- ocean's eleven
+- high school musical 
+- the incredibles
+- crazy stupid love
+- someone great
+- guernsey literary and potato peel society
+- concrete cowboy
+- real steel

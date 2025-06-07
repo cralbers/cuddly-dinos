@@ -1,0 +1,15 @@
+---
+title: "Books to Reread"
+date: 2023-12-16T10:17:54-05:00
+draft: false
+
+categories: 
+- books
+
+type: base
+---
+
+ones that i want to re-address at some point
+- Never Let Me Go / Kazuo Ishiguro
+- American Gods / Neil Gaiman
+- Dune / Frank Herbert

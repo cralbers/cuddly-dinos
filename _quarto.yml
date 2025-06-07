@@ -20,7 +20,10 @@ website:
       #   text: book stats
       - href: music.qmd
         text: music
+      - href: everythingelse.qmd
+        text: everything else
       - about.qmd
+      
     tools:
       - icon: book
         href: https://app.thestorygraph.com/profile/cralbers

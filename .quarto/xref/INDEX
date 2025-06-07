@@ -358,5 +358,89 @@
   },
   "music/top10songs_122923.qmd": {
     "top10songs_122923.html": "d5bfd1c1"
+  },
+  "books/talkingatnight/index.qmd": {
+    "index.html": "b53db1b6"
+  },
+  "books/theinvisiblemountain/index.qmd": {
+    "index.html": "0fb810b0"
+  },
+  "books/withoutyouthereisnous/index.qmd": {
+    "index.html": "a1b8506b"
+  },
+  "2023reading.qmd": {
+    "2023reading.html": "4e2f030d"
+  },
+  "2024reading.qmd": {
+    "2024reading.html": "1f5d78c8"
+  },
+  "everythingelse.qmd": {
+    "everythingelse.html": "5bcee26b"
+  },
+  "everythingelse/2024thoughts.qmd": {
+    "2024thoughts.html": "e8c96309"
+  },
+  "everythingelse/bookstoread.qmd": {
+    "bookstoread.html": "87751a74"
+  },
+  "everythingelse/bookstoreread.qmd": {
+    "bookstoreread.html": "9cdccbd5"
+  },
+  "everythingelse/bucket.qmd": {
+    "bucket.html": "21aeeec0"
+  },
+  "everythingelse/coding.qmd": {
+    "coding.html": "6a2b1bde"
+  },
+  "everythingelse/currrentlyreading.qmd": {
+    "currrentlyreading.html": "9e66a839"
+  },
+  "everythingelse/f1.qmd": {
+    "f1.html": "06670eb6"
+  },
+  "everythingelse/movies.qmd": {
+    "movies.html": "f4e2d30b"
+  },
+  "everythingelse/now_012324.qmd": {
+    "now_012324.html": "0e8d421c"
+  },
+  "everythingelse/now_032324.qmd": {
+    "now_032324.html": "9c3719b3"
+  },
+  "everythingelse/now_033124.qmd": {
+    "now_033124.html": "10f9c0c9"
+  },
+  "everythingelse/now_041623.qmd": {
+    "now_041623.html": "a9e9cc02"
+  },
+  "everythingelse/now_052124.qmd": {
+    "now_052124.html": "9b0afdc8"
+  },
+  "everythingelse/now_110523.qmd": {
+    "now_110523.html": "cd088549"
+  },
+  "everythingelse/now_110623.qmd": {
+    "now_110623.html": "b389781d"
+  },
+  "everythingelse/now_111023.qmd": {
+    "now_111023.html": "761138dc"
+  },
+  "everythingelse/now_112623.qmd": {
+    "now_112623.html": "d8a192de"
+  },
+  "everythingelse/now_120124.qmd": {
+    "now_120124.html": "a76a57e7"
+  },
+  "everythingelse/now_121623.qmd": {
+    "now_121623.html": "d5edbc4a"
+  },
+  "everythingelse/signlanguage.qmd": {
+    "signlanguage.html": "6f372975"
+  },
+  "everythingelse/thingstotry.qmd": {
+    "thingstotry.html": "96045d13"
+  },
+  "everythingelse/websites.qmd": {
+    "websites.html": "53cfdb7a"
   }
 }

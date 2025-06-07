@@ -1,0 +1,15 @@
+---
+title: "things i'm thinking about right now"
+date: 2023-11-06T19:37:12-05:00
+draft: false
+
+categories: 
+- now
+
+---
+
+- starting to read science papers again (this is my [RSS](https://www.inoreader.com/all_articles)) i feel out of the loop and like I am getting stupider
+- working on recording my workouts in notion
+- journaling again (can't seem to get started though) -> [this guy](https://www.instagram.com/nannisnotes/) has some super cool journals though 
+
+[previous now]({{< ref "now_110523.md" >}})

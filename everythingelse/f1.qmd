@@ -1,0 +1,16 @@
+---
+title: "F1"
+date: 2023-11-05T21:53:08-05:00
+draft: false
+
+categories: 
+- f1
+
+---
+
+compiling some of my favorite f1 content here
+
+- P1 podcast with Matt and Tommy: https://www.youtube.com/@mattp1tommy
+- World Destructor's Championship: https://www.reddit.com/user/basspro24chevy/
+- Screaming Meals: https://www.youtube.com/@screamingmeals
+- Drive to Survive (the netflix show) (obviously)

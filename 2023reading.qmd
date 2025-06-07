@@ -1,6 +1,5 @@
 ---
 title: "2023 books"
-description: null
 draft: false
 
 ---

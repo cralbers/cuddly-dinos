@@ -1,0 +1,19 @@
+---
+title: "things i'm thinking about right now"
+date: 2024-03-31T22:53:47-04:00
+draft: false
+
+categories: 
+- now
+
+---
+- that video of the guy yelling HIPS
+- II MOST WANTED by Beyoncé and Miley Cyrus (i'll be your shotgun rider till the day i die)
+- living a life in limbo 
+- being embarassed of my camera roll
+- the easter bunny 
+- how i am not a big sister in the traditional sense i don't think ?
+- i want to throw my phone out the window
+- will i be wanted? what i mean is will someone ever want to hold me? i am too big and want to feel small in that way that makes you feel safe and unexposed
+
+[previous now]({{< ref "now_032324.md" >}})

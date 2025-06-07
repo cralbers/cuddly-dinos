@@ -1,0 +1,17 @@
+---
+title: "things i'm thinking about right now"
+date: 2024-12-01T21:47:56-05:00
+draft: false
+
+categories: 
+- now
+
+---
+
+- it never really gets easier to leave home
+- miss city babe by prince of eden
+- spending $30 on bs
+- work and science and temporary knowledge
+
+
+[previous now]({{< ref "now_052124.md" >}})

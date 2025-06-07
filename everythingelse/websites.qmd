@@ -1,0 +1,13 @@
+---
+title: "websites"
+date: 2023-12-02T18:01:07-05:00
+draft: false
+
+categories:
+- info
+- websites
+- favorites
+---
+## my favorite websites for eating time
+- https://medium.com/
+- 
