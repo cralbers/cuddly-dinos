@@ -8,3 +8,12 @@ listing:
   image-placeholder: "_img/window.jpg"
 ---
 
+
+
+::: {.callout-warning icon=false appearance="minimal"}
+
+## hey!
+
+check out the stats [here](bookstats.qmd)
+
+:::

@@ -6,16 +6,27 @@ project:
 
 website:
   title: "bucket"
+  page-navigation: true
+  back-to-top-navigation: true
   navbar:
     left:
       - href: index.qmd
         text: home
       - books.qmd
-      - href: bookstats.qmd
-        text: book stats
+      # - href: bookstats.qmd
+      #   text: book stats
       - href: music.qmd
         text: music
       - about.qmd
+    tools:
+      - icon: book
+        href: https://app.thestorygraph.com/profile/cralbers
+      - icon: github
+        href: https://github.com/cralbers/bucket
+      
+  sidebar:
+    # Add this section to move sidebar to the left
+    position: "left"  # This moves the sidebar to the left
 
 
 format:
