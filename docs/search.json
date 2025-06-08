@@ -179,14 +179,14 @@
     "href": "bookstats.html",
     "title": "book stats",
     "section": "",
-    "text": "total books read: 14\n\n\n\n\nCode\nimport matplotlib.pyplot as plt\nimport pandas as pd\nimport plotly.express as px\nimport plotly.graph_objects as go\nfrom plotly.subplots import make_subplots\n\n# updated 6-6-25\nfiction = 10\nnonfiction = 4\n\nabc_read = 8\nabc_unread = 26 - abc_read\n\nfivetwo_read = 7\nfivetwo_unread = 52 - fivetwo_read\n\n## make fic/non-fic pie chart \ngenre_labels = ['fiction', 'non-fiction']\ngenre_num = [fiction, nonfiction]\n# genre_colors = ['#56505d', '#df3a26']\ngenre_colors2 = ['gold', 'mediumturquoise']\nd1 = {'genre': genre_labels, 'books': genre_num}\ngenre_df = pd.DataFrame(data=d1)\n# fig = px.pie(genre_df, values='books', names='genre')\n\n## make abcs pie chart\n\nabc_labels = ['read', 'unread']\nabc_num = [abc_read, abc_unread]\ncolors = ['#56505d', '#df3a26']\nabc_colors3 = ['darkorange', 'lightgreen']\n# fig = px.pie(genre_df, values='books', names='genre')\n\n\n## make 52books pie chart\n\nfivetwo_labels = ['read', 'unread']\nfivetwo_num = [fivetwo_read, fivetwo_unread]\ncolors = ['#56505d', '#df3a26']\nfivetwo_colors3 = ['#FE621D', '#DBB1BC']\n# fig = px.pie(genre_df, values='books', names='genre')\n\n\n## make bar chart of books by month\nmonths = ['jan 25', 'feb 25', 'mar 25', 'apr 25', 'may 25', 'jun 25']\ncounts = [1, 2, 1, 5, 4, 1]\nd = {'month': months, 'books': counts}\ndf = pd.DataFrame(data=d)\n\n\n\n# fig, (ax1, ax2) = plt.subplots(1, 2)\n\n\n# ax2 = px.line(df, x=\"month\", y=\"books\", title='books read by month', markers=True)\n# fig.show()\n\nfig = make_subplots(\n    rows=3, cols=2,\n    specs=[[{\"type\": \"pie\"}, {\"type\": \"xy\", \"rowspan\": 3}],\n           [{\"type\": \"pie\"},            None            ],\n           [{\"type\": \"pie\"},            None           ]],\n    print_grid=False,\n    subplot_titles=(\"fiction/non-fiction\", \"books read per month\", \"abcs\", \"52 books challenge\"))\n\n\n# fig = make_subplots(rows=1, cols=2, subplot_titles=(\"fiction/non-fiction\", \"books read per month\"), specs=[[{\"type\": \"pie\"}, {\"type\": \"xy\"}]])\nfig.add_trace(go.Pie(values = genre_num, labels = genre_labels, name='genres'), row = 1, col = 1)\nfig.update_traces(selector=dict(name='genres'), hoverinfo='label+percent', textinfo='value', textfont_size=15,\n                  marker=dict(colors=genre_colors2, line=dict(color='#000000', width=2)))\n\nfig.add_trace(go.Pie(values = abc_num, labels = abc_labels, name='abcs'), row = 2, col = 1)\nfig.update_traces(selector=dict(name='abcs'), hoverinfo='label+percent', textinfo='value', textfont_size=15,\n                  marker=dict(colors=abc_colors3, line=dict(color='#000000', width=2)))\n\nfig.add_trace(go.Pie(values = fivetwo_num, labels = fivetwo_labels, name='fivetwo'), row = 3, col = 1)\nfig.update_traces(selector=dict(name='fivetwo'), hoverinfo='label+percent', textinfo='value', textfont_size=15,\n                  marker=dict(colors=fivetwo_colors3, line=dict(color='#000000', width=2)))\n\nfig.add_trace(\n    go.Scatter(x=months, y=counts),\n    row=1, col=2\n)\nfig.update_layout(height=500, showlegend=False)\nfig.show()\n\n\n        \n        \n        \n\n\n                            \n                                            \n\n\n\n\n\nreading the alphabet\n\n\n\nabcs 25\n\n\n\n\n\na\n\n\n\nb\n\n\n\nc\n\n\n\nd\n\n\n\ne\n\n\n\nf\n\n\n\ng\nGoing Clear\n\n\nh\nHidden Figures\n\n\ni\n\n\n\nj\n\n\n\nk\n\n\n\nl\nLibby Lost and Found\n\n\nm\nMigrations\n\n\nn\nNexus\n\n\no\n\n\n\np\n\n\n\nq\n\n\n\nr\n\n\n\ns\nShantaram\n\n\nt\nTalking at Night\n\n\nu\n\n\n\nv\n\n\n\nw\nWithout You There Is No Us\n\n\nx\n\n\n\ny\n\n\n\nz\n\n\n\n\n\n\n\n\n\n\nprompt\nbook\n\n\n\n\n1. A pun in the title\n\n\n\n2. A character with red hair\n\n\n\n3. Title starts with letter “M”\n\n\n\n4. Title starts with letter “N”\nNexus\n\n\n5. Plot includes a heist\n\n\n\n6. Genre One: Set in Spring\n\n\n\n7. Genre Two: Set in Summer\n\n\n\n8. Genre Three: Set in Autumn\n\n\n\n9. Genre Four: Set in Winter\n\n\n\n10. Author’s last name is also a first name\n\n\n\n11. A prequel\n\n\n\n12. Has a moon on the cover\n\n\n\n13. Title is ten letters or less\nShantaram\n\n\n14. Climate fiction\nMigrations\n\n\n15. Includes Latin American history\nThe Invisible Mountain\n\n\n16. Author has won an Edgar award\n\n\n\n17. Told in verse\n\n\n\n18. A character who can fly\n\n\n\n19. Has short chapters\n\n\n\n20. A fairy tale retelling\n\n\n\n21. Character’s name in the title\nLibby Lost and Found\n\n\n22. Found family trope\n\n\n\n23. A sprayed edge\n\n\n\n24. Title is a spoiler\n\n\n\n25. Breaks the fourth wall\n\n\n\n26. More than a million copies sold\n\n\n\n27. Features a magician\n\n\n\n28. A crossover (Set in a shared universe)\n\n\n\n29. Shares universe with prompt 28\n\n\n\n30. In the public domain\n\n\n\n31. Audiobook has multiple narrators\n\n\n\n32. Includes a diary entry\n\n\n\n33. A standalone novel\nThe Fury\n\n\n34. Direction in the title\n\n\n\n35. Written in third person\n\n\n\n36. Final sentence is less than 6 words long\n\n\n\n37. Genre chosen for you by someone else\n\n\n\n38. An adventure story\n\n\n\n39. Has an epigraph\n\n\n\n40. Stream of consciousness narrative\n\n\n\n41. Cover font is in a primary color\nHidden Figures\n\n\n42. Non-human antagonist\n\n\n\n43. Explores social class\n\n\n\n44. A celebrity on the cover\n\n\n\n45. Author releases more than one book a year\n\n\n\n46. Read in a “-ber” month\n\n\n\n47. “I think it was blue”\n\n\n\n48. Related to the word “puzzle”\n\n\n\n49. Set in a country with an active volcano\n\n\n\n50. Set in the 1940s\n\n\n\n51. 300-400 pages long\n\n\n\n52. Published in 2025"
+    "text": "total books read: 14\n\n\n\n\nCode\nimport matplotlib.pyplot as plt\nimport pandas as pd\nimport plotly.express as px\nimport plotly.graph_objects as go\nfrom plotly.subplots import make_subplots\n\n# updated 6-8-25\nfiction = 11\nnonfiction = 4\n\nabc_read = 9\nabc_unread = 26 - abc_read\n\nfivetwo_read = 8\nfivetwo_unread = 52 - fivetwo_read\n\n## make fic/non-fic pie chart \ngenre_labels = ['fiction', 'non-fiction']\ngenre_num = [fiction, nonfiction]\n# genre_colors = ['#56505d', '#df3a26']\ngenre_colors2 = ['gold', 'mediumturquoise']\nd1 = {'genre': genre_labels, 'books': genre_num}\ngenre_df = pd.DataFrame(data=d1)\n# fig = px.pie(genre_df, values='books', names='genre')\n\n## make abcs pie chart\n\nabc_labels = ['read', 'unread']\nabc_num = [abc_read, abc_unread]\ncolors = ['#56505d', '#df3a26']\nabc_colors3 = ['darkorange', 'lightgreen']\n# fig = px.pie(genre_df, values='books', names='genre')\n\n\n## make 52books pie chart\n\nfivetwo_labels = ['read', 'unread']\nfivetwo_num = [fivetwo_read, fivetwo_unread]\ncolors = ['#56505d', '#df3a26']\nfivetwo_colors3 = ['#FE621D', '#DBB1BC']\n# fig = px.pie(genre_df, values='books', names='genre')\n\n\n## make bar chart of books by month\nmonths = ['jan 25', 'feb 25', 'mar 25', 'apr 25', 'may 25', 'jun 25']\ncounts = [1, 2, 1, 5, 4, 1]\nd = {'month': months, 'books': counts}\ndf = pd.DataFrame(data=d)\n\n\n\n# fig, (ax1, ax2) = plt.subplots(1, 2)\n\n\n# ax2 = px.line(df, x=\"month\", y=\"books\", title='books read by month', markers=True)\n# fig.show()\n\nfig = make_subplots(\n    rows=3, cols=2,\n    specs=[[{\"type\": \"pie\"}, {\"type\": \"xy\", \"rowspan\": 3}],\n           [{\"type\": \"pie\"},            None            ],\n           [{\"type\": \"pie\"},            None           ]],\n    print_grid=False,\n    subplot_titles=(\"fiction/non-fiction\", \"books read per month\", \"abcs\", \"52 books challenge\"))\n\n\n# fig = make_subplots(rows=1, cols=2, subplot_titles=(\"fiction/non-fiction\", \"books read per month\"), specs=[[{\"type\": \"pie\"}, {\"type\": \"xy\"}]])\nfig.add_trace(go.Pie(values = genre_num, labels = genre_labels, name='genres'), row = 1, col = 1)\nfig.update_traces(selector=dict(name='genres'), hoverinfo='label+percent', textinfo='value', textfont_size=15,\n                  marker=dict(colors=genre_colors2, line=dict(color='#000000', width=2)))\n\nfig.add_trace(go.Pie(values = abc_num, labels = abc_labels, name='abcs'), row = 2, col = 1)\nfig.update_traces(selector=dict(name='abcs'), hoverinfo='label+percent', textinfo='value', textfont_size=15,\n                  marker=dict(colors=abc_colors3, line=dict(color='#000000', width=2)))\n\nfig.add_trace(go.Pie(values = fivetwo_num, labels = fivetwo_labels, name='fivetwo'), row = 3, col = 1)\nfig.update_traces(selector=dict(name='fivetwo'), hoverinfo='label+percent', textinfo='value', textfont_size=15,\n                  marker=dict(colors=fivetwo_colors3, line=dict(color='#000000', width=2)))\n\nfig.add_trace(\n    go.Scatter(x=months, y=counts),\n    row=1, col=2\n)\nfig.update_layout(height=500, showlegend=False)\nfig.show()\n\n\n        \n        \n        \n\n\n                            \n                                            \n\n\n\n\n\nreading the alphabet\n\n\n\nabcs 25\n\n\n\n\n\na\n\n\n\nb\n\n\n\nc\n\n\n\nd\n\n\n\ne\n\n\n\nf\n\n\n\ng\nGoing Clear\n\n\nh\nHidden Figures\n\n\ni\nIf We Were Villains\n\n\nj\n\n\n\nk\n\n\n\nl\nLibby Lost and Found\n\n\nm\nMigrations\n\n\nn\nNexus\n\n\no\n\n\n\np\n\n\n\nq\n\n\n\nr\n\n\n\ns\nShantaram\n\n\nt\nTalking at Night\n\n\nu\n\n\n\nv\n\n\n\nw\nWithout You There Is No Us\n\n\nx\n\n\n\ny\n\n\n\nz\n\n\n\n\n\n\n\n\n\n\nprompt\nbook\n\n\n\n\n1. A pun in the title\n\n\n\n2. A character with red hair\n\n\n\n3. Title starts with letter “M”\nMy Year of Rest and Relaxation\n\n\n4. Title starts with letter “N”\nNexus\n\n\n5. Plot includes a heist\n\n\n\n6. Genre One: Set in Spring\n\n\n\n7. Genre Two: Set in Summer\n\n\n\n8. Genre Three: Set in Autumn\n\n\n\n9. Genre Four: Set in Winter\n\n\n\n10. Author’s last name is also a first name\n\n\n\n11. A prequel\n\n\n\n12. Has a moon on the cover\n\n\n\n13. Title is ten letters or less\nShantaram\n\n\n14. Climate fiction\nMigrations\n\n\n15. Includes Latin American history\nThe Invisible Mountain\n\n\n16. Author has won an Edgar award\n\n\n\n17. Told in verse\n\n\n\n18. A character who can fly\n\n\n\n19. Has short chapters\n\n\n\n20. A fairy tale retelling\n\n\n\n21. Character’s name in the title\nLibby Lost and Found\n\n\n22. Found family trope\n\n\n\n23. A sprayed edge\n\n\n\n24. Title is a spoiler\n\n\n\n25. Breaks the fourth wall\n\n\n\n26. More than a million copies sold\n\n\n\n27. Features a magician\n\n\n\n28. A crossover (Set in a shared universe)\n\n\n\n29. Shares universe with prompt 28\n\n\n\n30. In the public domain\n\n\n\n31. Audiobook has multiple narrators\n\n\n\n32. Includes a diary entry\n\n\n\n33. A standalone novel\nThe Fury\n\n\n34. Direction in the title\n\n\n\n35. Written in third person\n\n\n\n36. Final sentence is less than 6 words long\n\n\n\n37. Genre chosen for you by someone else\n\n\n\n38. An adventure story\n\n\n\n39. Has an epigraph\n\n\n\n40. Stream of consciousness narrative\n\n\n\n41. Cover font is in a primary color\nHidden Figures\n\n\n42. Non-human antagonist\n\n\n\n43. Explores social class\n\n\n\n44. A celebrity on the cover\n\n\n\n45. Author releases more than one book a year\n\n\n\n46. Read in a “-ber” month\n\n\n\n47. “I think it was blue”\n\n\n\n48. Related to the word “puzzle”\n\n\n\n49. Set in a country with an active volcano\n\n\n\n50. Set in the 1940s\n\n\n\n51. 300-400 pages long\n\n\n\n52. Published in 2025"
   },
   {
     "objectID": "bookstats.html#book-stats",
     "href": "bookstats.html#book-stats",
     "title": "book stats",
     "section": "",
-    "text": "total books read: 14\n\n\n\n\nCode\nimport matplotlib.pyplot as plt\nimport pandas as pd\nimport plotly.express as px\nimport plotly.graph_objects as go\nfrom plotly.subplots import make_subplots\n\n# updated 6-6-25\nfiction = 10\nnonfiction = 4\n\nabc_read = 8\nabc_unread = 26 - abc_read\n\nfivetwo_read = 7\nfivetwo_unread = 52 - fivetwo_read\n\n## make fic/non-fic pie chart \ngenre_labels = ['fiction', 'non-fiction']\ngenre_num = [fiction, nonfiction]\n# genre_colors = ['#56505d', '#df3a26']\ngenre_colors2 = ['gold', 'mediumturquoise']\nd1 = {'genre': genre_labels, 'books': genre_num}\ngenre_df = pd.DataFrame(data=d1)\n# fig = px.pie(genre_df, values='books', names='genre')\n\n## make abcs pie chart\n\nabc_labels = ['read', 'unread']\nabc_num = [abc_read, abc_unread]\ncolors = ['#56505d', '#df3a26']\nabc_colors3 = ['darkorange', 'lightgreen']\n# fig = px.pie(genre_df, values='books', names='genre')\n\n\n## make 52books pie chart\n\nfivetwo_labels = ['read', 'unread']\nfivetwo_num = [fivetwo_read, fivetwo_unread]\ncolors = ['#56505d', '#df3a26']\nfivetwo_colors3 = ['#FE621D', '#DBB1BC']\n# fig = px.pie(genre_df, values='books', names='genre')\n\n\n## make bar chart of books by month\nmonths = ['jan 25', 'feb 25', 'mar 25', 'apr 25', 'may 25', 'jun 25']\ncounts = [1, 2, 1, 5, 4, 1]\nd = {'month': months, 'books': counts}\ndf = pd.DataFrame(data=d)\n\n\n\n# fig, (ax1, ax2) = plt.subplots(1, 2)\n\n\n# ax2 = px.line(df, x=\"month\", y=\"books\", title='books read by month', markers=True)\n# fig.show()\n\nfig = make_subplots(\n    rows=3, cols=2,\n    specs=[[{\"type\": \"pie\"}, {\"type\": \"xy\", \"rowspan\": 3}],\n           [{\"type\": \"pie\"},            None            ],\n           [{\"type\": \"pie\"},            None           ]],\n    print_grid=False,\n    subplot_titles=(\"fiction/non-fiction\", \"books read per month\", \"abcs\", \"52 books challenge\"))\n\n\n# fig = make_subplots(rows=1, cols=2, subplot_titles=(\"fiction/non-fiction\", \"books read per month\"), specs=[[{\"type\": \"pie\"}, {\"type\": \"xy\"}]])\nfig.add_trace(go.Pie(values = genre_num, labels = genre_labels, name='genres'), row = 1, col = 1)\nfig.update_traces(selector=dict(name='genres'), hoverinfo='label+percent', textinfo='value', textfont_size=15,\n                  marker=dict(colors=genre_colors2, line=dict(color='#000000', width=2)))\n\nfig.add_trace(go.Pie(values = abc_num, labels = abc_labels, name='abcs'), row = 2, col = 1)\nfig.update_traces(selector=dict(name='abcs'), hoverinfo='label+percent', textinfo='value', textfont_size=15,\n                  marker=dict(colors=abc_colors3, line=dict(color='#000000', width=2)))\n\nfig.add_trace(go.Pie(values = fivetwo_num, labels = fivetwo_labels, name='fivetwo'), row = 3, col = 1)\nfig.update_traces(selector=dict(name='fivetwo'), hoverinfo='label+percent', textinfo='value', textfont_size=15,\n                  marker=dict(colors=fivetwo_colors3, line=dict(color='#000000', width=2)))\n\nfig.add_trace(\n    go.Scatter(x=months, y=counts),\n    row=1, col=2\n)\nfig.update_layout(height=500, showlegend=False)\nfig.show()\n\n\n        \n        \n        \n\n\n                            \n                                            \n\n\n\n\n\nreading the alphabet\n\n\n\nabcs 25\n\n\n\n\n\na\n\n\n\nb\n\n\n\nc\n\n\n\nd\n\n\n\ne\n\n\n\nf\n\n\n\ng\nGoing Clear\n\n\nh\nHidden Figures\n\n\ni\n\n\n\nj\n\n\n\nk\n\n\n\nl\nLibby Lost and Found\n\n\nm\nMigrations\n\n\nn\nNexus\n\n\no\n\n\n\np\n\n\n\nq\n\n\n\nr\n\n\n\ns\nShantaram\n\n\nt\nTalking at Night\n\n\nu\n\n\n\nv\n\n\n\nw\nWithout You There Is No Us\n\n\nx\n\n\n\ny\n\n\n\nz\n\n\n\n\n\n\n\n\n\n\nprompt\nbook\n\n\n\n\n1. A pun in the title\n\n\n\n2. A character with red hair\n\n\n\n3. Title starts with letter “M”\n\n\n\n4. Title starts with letter “N”\nNexus\n\n\n5. Plot includes a heist\n\n\n\n6. Genre One: Set in Spring\n\n\n\n7. Genre Two: Set in Summer\n\n\n\n8. Genre Three: Set in Autumn\n\n\n\n9. Genre Four: Set in Winter\n\n\n\n10. Author’s last name is also a first name\n\n\n\n11. A prequel\n\n\n\n12. Has a moon on the cover\n\n\n\n13. Title is ten letters or less\nShantaram\n\n\n14. Climate fiction\nMigrations\n\n\n15. Includes Latin American history\nThe Invisible Mountain\n\n\n16. Author has won an Edgar award\n\n\n\n17. Told in verse\n\n\n\n18. A character who can fly\n\n\n\n19. Has short chapters\n\n\n\n20. A fairy tale retelling\n\n\n\n21. Character’s name in the title\nLibby Lost and Found\n\n\n22. Found family trope\n\n\n\n23. A sprayed edge\n\n\n\n24. Title is a spoiler\n\n\n\n25. Breaks the fourth wall\n\n\n\n26. More than a million copies sold\n\n\n\n27. Features a magician\n\n\n\n28. A crossover (Set in a shared universe)\n\n\n\n29. Shares universe with prompt 28\n\n\n\n30. In the public domain\n\n\n\n31. Audiobook has multiple narrators\n\n\n\n32. Includes a diary entry\n\n\n\n33. A standalone novel\nThe Fury\n\n\n34. Direction in the title\n\n\n\n35. Written in third person\n\n\n\n36. Final sentence is less than 6 words long\n\n\n\n37. Genre chosen for you by someone else\n\n\n\n38. An adventure story\n\n\n\n39. Has an epigraph\n\n\n\n40. Stream of consciousness narrative\n\n\n\n41. Cover font is in a primary color\nHidden Figures\n\n\n42. Non-human antagonist\n\n\n\n43. Explores social class\n\n\n\n44. A celebrity on the cover\n\n\n\n45. Author releases more than one book a year\n\n\n\n46. Read in a “-ber” month\n\n\n\n47. “I think it was blue”\n\n\n\n48. Related to the word “puzzle”\n\n\n\n49. Set in a country with an active volcano\n\n\n\n50. Set in the 1940s\n\n\n\n51. 300-400 pages long\n\n\n\n52. Published in 2025"
+    "text": "total books read: 14\n\n\n\n\nCode\nimport matplotlib.pyplot as plt\nimport pandas as pd\nimport plotly.express as px\nimport plotly.graph_objects as go\nfrom plotly.subplots import make_subplots\n\n# updated 6-8-25\nfiction = 11\nnonfiction = 4\n\nabc_read = 9\nabc_unread = 26 - abc_read\n\nfivetwo_read = 8\nfivetwo_unread = 52 - fivetwo_read\n\n## make fic/non-fic pie chart \ngenre_labels = ['fiction', 'non-fiction']\ngenre_num = [fiction, nonfiction]\n# genre_colors = ['#56505d', '#df3a26']\ngenre_colors2 = ['gold', 'mediumturquoise']\nd1 = {'genre': genre_labels, 'books': genre_num}\ngenre_df = pd.DataFrame(data=d1)\n# fig = px.pie(genre_df, values='books', names='genre')\n\n## make abcs pie chart\n\nabc_labels = ['read', 'unread']\nabc_num = [abc_read, abc_unread]\ncolors = ['#56505d', '#df3a26']\nabc_colors3 = ['darkorange', 'lightgreen']\n# fig = px.pie(genre_df, values='books', names='genre')\n\n\n## make 52books pie chart\n\nfivetwo_labels = ['read', 'unread']\nfivetwo_num = [fivetwo_read, fivetwo_unread]\ncolors = ['#56505d', '#df3a26']\nfivetwo_colors3 = ['#FE621D', '#DBB1BC']\n# fig = px.pie(genre_df, values='books', names='genre')\n\n\n## make bar chart of books by month\nmonths = ['jan 25', 'feb 25', 'mar 25', 'apr 25', 'may 25', 'jun 25']\ncounts = [1, 2, 1, 5, 4, 1]\nd = {'month': months, 'books': counts}\ndf = pd.DataFrame(data=d)\n\n\n\n# fig, (ax1, ax2) = plt.subplots(1, 2)\n\n\n# ax2 = px.line(df, x=\"month\", y=\"books\", title='books read by month', markers=True)\n# fig.show()\n\nfig = make_subplots(\n    rows=3, cols=2,\n    specs=[[{\"type\": \"pie\"}, {\"type\": \"xy\", \"rowspan\": 3}],\n           [{\"type\": \"pie\"},            None            ],\n           [{\"type\": \"pie\"},            None           ]],\n    print_grid=False,\n    subplot_titles=(\"fiction/non-fiction\", \"books read per month\", \"abcs\", \"52 books challenge\"))\n\n\n# fig = make_subplots(rows=1, cols=2, subplot_titles=(\"fiction/non-fiction\", \"books read per month\"), specs=[[{\"type\": \"pie\"}, {\"type\": \"xy\"}]])\nfig.add_trace(go.Pie(values = genre_num, labels = genre_labels, name='genres'), row = 1, col = 1)\nfig.update_traces(selector=dict(name='genres'), hoverinfo='label+percent', textinfo='value', textfont_size=15,\n                  marker=dict(colors=genre_colors2, line=dict(color='#000000', width=2)))\n\nfig.add_trace(go.Pie(values = abc_num, labels = abc_labels, name='abcs'), row = 2, col = 1)\nfig.update_traces(selector=dict(name='abcs'), hoverinfo='label+percent', textinfo='value', textfont_size=15,\n                  marker=dict(colors=abc_colors3, line=dict(color='#000000', width=2)))\n\nfig.add_trace(go.Pie(values = fivetwo_num, labels = fivetwo_labels, name='fivetwo'), row = 3, col = 1)\nfig.update_traces(selector=dict(name='fivetwo'), hoverinfo='label+percent', textinfo='value', textfont_size=15,\n                  marker=dict(colors=fivetwo_colors3, line=dict(color='#000000', width=2)))\n\nfig.add_trace(\n    go.Scatter(x=months, y=counts),\n    row=1, col=2\n)\nfig.update_layout(height=500, showlegend=False)\nfig.show()\n\n\n        \n        \n        \n\n\n                            \n                                            \n\n\n\n\n\nreading the alphabet\n\n\n\nabcs 25\n\n\n\n\n\na\n\n\n\nb\n\n\n\nc\n\n\n\nd\n\n\n\ne\n\n\n\nf\n\n\n\ng\nGoing Clear\n\n\nh\nHidden Figures\n\n\ni\nIf We Were Villains\n\n\nj\n\n\n\nk\n\n\n\nl\nLibby Lost and Found\n\n\nm\nMigrations\n\n\nn\nNexus\n\n\no\n\n\n\np\n\n\n\nq\n\n\n\nr\n\n\n\ns\nShantaram\n\n\nt\nTalking at Night\n\n\nu\n\n\n\nv\n\n\n\nw\nWithout You There Is No Us\n\n\nx\n\n\n\ny\n\n\n\nz\n\n\n\n\n\n\n\n\n\n\nprompt\nbook\n\n\n\n\n1. A pun in the title\n\n\n\n2. A character with red hair\n\n\n\n3. Title starts with letter “M”\nMy Year of Rest and Relaxation\n\n\n4. Title starts with letter “N”\nNexus\n\n\n5. Plot includes a heist\n\n\n\n6. Genre One: Set in Spring\n\n\n\n7. Genre Two: Set in Summer\n\n\n\n8. Genre Three: Set in Autumn\n\n\n\n9. Genre Four: Set in Winter\n\n\n\n10. Author’s last name is also a first name\n\n\n\n11. A prequel\n\n\n\n12. Has a moon on the cover\n\n\n\n13. Title is ten letters or less\nShantaram\n\n\n14. Climate fiction\nMigrations\n\n\n15. Includes Latin American history\nThe Invisible Mountain\n\n\n16. Author has won an Edgar award\n\n\n\n17. Told in verse\n\n\n\n18. A character who can fly\n\n\n\n19. Has short chapters\n\n\n\n20. A fairy tale retelling\n\n\n\n21. Character’s name in the title\nLibby Lost and Found\n\n\n22. Found family trope\n\n\n\n23. A sprayed edge\n\n\n\n24. Title is a spoiler\n\n\n\n25. Breaks the fourth wall\n\n\n\n26. More than a million copies sold\n\n\n\n27. Features a magician\n\n\n\n28. A crossover (Set in a shared universe)\n\n\n\n29. Shares universe with prompt 28\n\n\n\n30. In the public domain\n\n\n\n31. Audiobook has multiple narrators\n\n\n\n32. Includes a diary entry\n\n\n\n33. A standalone novel\nThe Fury\n\n\n34. Direction in the title\n\n\n\n35. Written in third person\n\n\n\n36. Final sentence is less than 6 words long\n\n\n\n37. Genre chosen for you by someone else\n\n\n\n38. An adventure story\n\n\n\n39. Has an epigraph\n\n\n\n40. Stream of consciousness narrative\n\n\n\n41. Cover font is in a primary color\nHidden Figures\n\n\n42. Non-human antagonist\n\n\n\n43. Explores social class\n\n\n\n44. A celebrity on the cover\n\n\n\n45. Author releases more than one book a year\n\n\n\n46. Read in a “-ber” month\n\n\n\n47. “I think it was blue”\n\n\n\n48. Related to the word “puzzle”\n\n\n\n49. Set in a country with an active volcano\n\n\n\n50. Set in the 1940s\n\n\n\n51. 300-400 pages long\n\n\n\n52. Published in 2025"
   },
   {
     "objectID": "bookstats.html#all-time-stats",
@@ -231,95 +231,102 @@
     "text": "finished 11/26/23\ni really liked the writing style of this book - i am always impressed when authors are able to create such unique and individualized voices for different characters to the point that you can tell who is narrating without the author having to explicitly state whose point of view the story is currently being told from. the story is really tragic, and i wanted resolution at the end for Nichole and for her dad to go to prison for a long long time. but i guess the point is that everyone grieves their own tragedies differently, but it made me sad that dolores felt so much relief at being blamed for the accident and that she lost her community (except for abbott). overall i really liked it, but it made me sad too.\n\n\n\n Back to top"
   },
   {
-    "objectID": "books/thespiritcatchesyouandyoufalldown/index.html",
-    "href": "books/thespiritcatchesyouandyoufalldown/index.html",
-    "title": "The Spirit Catches You and You Fall Down / Anne Fadiman",
+    "objectID": "books/thestoriedlifeofajfikry/index.html",
+    "href": "books/thestoriedlifeofajfikry/index.html",
+    "title": "The Storied Life of A.J. Fikry / Gabrielle Zevin",
     "section": "",
-    "text": "finished 2/25/23\nWhat would you do? The parents love their daughter unconditionally the only way they know how, and the doctors want to heal her unrelentlessly the only way they know how. The second to last chapter is called “The Life or the Soul” and that pretty much sums it up. How do you fix a problem created by the fact that no one party is correct- a war of moralities and differences of opinion in which there is no true positive? I think probably the first step is to listen to each other.\n\n\n\n Back to top"
+    "text": "finished 5/10/25\nlovable but not vomit inducing. just a nice story about kind people who manage to find other kind people to read and carry out their lives with. we are not short stories, we are long, never-ending ones.\n4.25/5\n\n\n\n Back to top"
   },
   {
-    "objectID": "books/theprincessbride/index.html",
-    "href": "books/theprincessbride/index.html",
-    "title": "The Princess Bride / William Goldman",
+    "objectID": "books/thesongofthecell/index.html",
+    "href": "books/thesongofthecell/index.html",
+    "title": "The Song of the Cell / Siddhartha Mukherjee",
     "section": "",
-    "text": "finished 3/5/24 - such a fun and silly book - great escapism - much funnier than i anticipated - “my name is inigo montoya. you killed my father. prepare to die.”\n\n\n\n Back to top"
+    "text": "finished 1/14/24\nphenomenal. the blend of his personal stories and experiences with hardcore science, as well as the lyrical language surrounding all of the fascinating history around the discovery of the different parts of the cell is brilliant. i was just as amazed as i was reading The Gene because he is able to craft these intricate and complex scientific histories into dramatic and understandable and riveting stories. loved it.\n\n\n\n Back to top"
   },
   {
-    "objectID": "books/theperfectstorm/index.html",
-    "href": "books/theperfectstorm/index.html",
-    "title": "The Perfect Storm / Sebastian Junger",
+    "objectID": "books/thepoppywar/index.html",
+    "href": "books/thepoppywar/index.html",
+    "title": "The Poppy War / R.F. Kuang",
     "section": "",
-    "text": "finished 4/4/24\nfor the sake of honesty, i have read this before, but evidently had forgotten because i didn’t remember that until the third chapter or so. anyways, amazing journalism, it’s a tragic story but the book is so well researched and the story is told very well. I do wish that I had some type of background that had given me boat and ocean and fishing knowledge, because I think I would have understood a ton more, but that’s also partially on me because I didn’t really do a lot (any) looking into terms that were confusing and just sort of relied on context clues to understand what was going on. but anyways, the ocean is insane and I am definitely not destined to be a fisherman on a swordfish boat.\n\n\n\n Back to top"
+    "text": "finished 4/30/25\nreally dark but written super well. rin becomes kind of irritating, and is clearly lost in her own opportunity for power. will be interesting to see how the rest of the story pans out in the next books (if i get to them lol)\n4/5\n\n\n\n Back to top"
   },
   {
-    "objectID": "books/theinvisiblemountain/index.html",
-    "href": "books/theinvisiblemountain/index.html",
-    "title": "The Invisible Mountain / Carolina De Robertis",
+    "objectID": "books/thememoirsofstockholmsven/index.html",
+    "href": "books/thememoirsofstockholmsven/index.html",
+    "title": "The Memoirs of Stockholm Sven / Nathaniel Ian Miller",
     "section": "",
-    "text": "finished 6/1/25\nlisten you’re gonna get me everytime with a multigenerational magical realism type beat. every time. women are so strong, it makes me sad. female friendships are necessary and beautiful. a love letter to uruguay, sweeping and haunting. the only part that frustrated me was that it went on a little too long, and i didn’t feel like salome’s (love that name also) commitment to the tupamaros was completely explained, other than that she wanted to feel connected to the world around her and maintain her friendship with leona. overall, really good.\n3.75/5\n\n\n\n Back to top"
+    "text": "finished 5/23/24 \\ I have never really read a story like this. The setting and environment was so unique, and in an area i had never even heard of, which was so fascinating to learn about. also i just liked that the story wasn’t about one romantic relationship, or someone’s life’s mission, but was more about a life lived learning about companionship and isolation and how to be a person. just a really singular and unique story- really loved it.\nalso should i go on the Arctic Circle Expeditionary Program?? (https://thearcticcircle.org/)\n\n\n\n Back to top"
   },
   {
-    "objectID": "books/thehealingofamerica/index.html",
-    "href": "books/thehealingofamerica/index.html",
-    "title": "The Healing of America / T. R. Reid",
+    "objectID": "books/thehouseintheceruleansea/index.html",
+    "href": "books/thehouseintheceruleansea/index.html",
+    "title": "The House in the Cerulean Sea / TJ Klune",
     "section": "",
-    "text": "finished 1/24/23\nMakes you do some big thinking about the selfishness of US government. I really liked Reid’s approach of first researching and getting first hand experience with health care systems of other nations that are comparable to the US in other metrics, and then broaching the topic of actually reforming our health care system- I thought it was well thought out and researched, and provided realistic suggestions for action. Also, the dedication really sticks it to people who argue that we shouldn’t take inspiration from other countries, which is pretty fun.\n\n\n\n Back to top"
+    "text": "finished (third reread) 2/11/23\nThis stupid book. 10 out of 5.\n\n\n\n Back to top"
   },
   {
-    "objectID": "books/thegirlwhoplayedwithfire/index.html",
-    "href": "books/thegirlwhoplayedwithfire/index.html",
-    "title": "The Girl Who Played with Fire / Stieg Larsson",
+    "objectID": "books/thegodofsmallthings/index.html",
+    "href": "books/thegodofsmallthings/index.html",
+    "title": "The God of Small Things / Arundhati Roy",
     "section": "",
-    "text": "finished 5/2/23\nloved it- it had crime, murder, pro boxers and computer hacking. what more could you ask for?\n\n\n\n Back to top"
+    "text": "finished 4/6/24\nhey what? to be fair (to be fairrrrr) i did pick this up from goodwill without reading the blurb or reading anything about it online. here are my thoughts in bullet point format - wtf - was not prepped for the sexual assault of a minor in the third chapter - kind of hard to track the plot sometimes because the language is languishing and exploratory and feels meandering - but also the language is beautiful? “the god of small things” god what a beautiful phrase - loved the unconventional capitalized phrases - devastating and upsetting - good i think - need to think more about it - political pieces are very interesting - realized I know next to nothing about the politcal plane of India in the late 60s post British liberation\n\n\n\n Back to top"
   },
   {
-    "objectID": "books/thefury/index.html",
-    "href": "books/thefury/index.html",
-    "title": "The Fury / Alex Michaelides",
+    "objectID": "books/thegirlwhokickedthehornetsnest/index.html",
+    "href": "books/thegirlwhokickedthehornetsnest/index.html",
+    "title": "The Girl Who Kicked the Hornet’s Nest / Stieg Larsson",
     "section": "",
-    "text": "finished 4/15/25\nooh scary winddddd. a very agatha christie mystery with a touch of modern theatrical people and some ill-timed practical jokes. a very unreliable narrator. very predictable but a fun read nonetheless.\n\n\n\n Back to top"
+    "text": "finished 6/30/23\nJust as good as the other two- this one definitely has more characters and storylines to keep track of, but it was still awesome. lots of spying and crime and intrigue, very fun.\n\n\n\n Back to top"
   },
   {
-    "objectID": "books/thedictionaryoflostwords/index.html",
-    "href": "books/thedictionaryoflostwords/index.html",
-    "title": "The Dictionary of Lost Words",
+    "objectID": "books/thefivepeopleyoumeetinheaven/index.html",
+    "href": "books/thefivepeopleyoumeetinheaven/index.html",
+    "title": "The Five People You Meet in Heaven / Mitch Albom",
     "section": "",
-    "text": "finished 1/31/24 i really liked this one! the language was so beautiful, and the feminist themes were really well expounded upon. the extreme challenges of being a working woman in the late 19th - early 20th century were presented just subtly enough to get the point across without having to be blatant about the themes she was addressing. i thought the plot was beautiful, and it was really interesting to learn about the making of the first dictionary also.\n\n\n\n Back to top"
+    "text": "finished 4/20/25\na sweet book. be kind to the people you meet. gruesome death for such a sentimental book.\n\n\n\n Back to top"
   },
   {
-    "objectID": "books/somewherebeyondthesea/index.html",
-    "href": "books/somewherebeyondthesea/index.html",
-    "title": "Somewhere Beyond the Sea / T.J. Klune",
+    "objectID": "books/talkingatnight/index.html",
+    "href": "books/talkingatnight/index.html",
+    "title": "Talking at Night / Claire Daverly",
     "section": "",
-    "text": "finished 9/16/24 \\ (sequel to The House in the Cerulean Sea) sorry this book was sickeningly good. i love every character (except the bad ones), they are all so funny and endearing and lifelike and even though it was sappy at times god it was so good.\n\n\n\n Back to top"
+    "text": "finished 5/30/25\ngosh this was really well done. the language was beautiful and i loved the story- the relationship between will and rosie feels genuine and you can feel the ache. really liked it.\n4/5\n\n\n\n Back to top"
   },
   {
-    "objectID": "books/shantaram/index.html",
-    "href": "books/shantaram/index.html",
-    "title": "Shantaram / Gregory David Roberts",
+    "objectID": "books/skippydies/index.html",
+    "href": "books/skippydies/index.html",
+    "title": "Skippy Dies / Paul Murray",
     "section": "",
-    "text": "finished 4/12/25\ngot to love an adventure story. one of those books that makes you really wonder what of it is true in terms of what actually happened, or true in the sense that the story evokes emotions that are truthful to the actual event. definitely glad i stuck with it through the slow parts, because the things that happen at the end are crazy. i looked up my guy gregory and now he’s busy posting weird psychedelic edits to his songs on instagram, so go him i guess. seems like prison is at least a great place to write about what got you in there, because this book turned out pretty good. it’s about community and personal imperfections and how you can still be a good person even if you have done bad things and continue to do bad things if you are doing them for the right reasons. and also about how to escape from prison. and how to get into illegal passport production.\n\n\n\n Back to top"
+    "text": "finished 7/7/23\nthis one was a long one (&gt;600 pgs), but very glad i read it. super funny and addresses the lives of teenagers and kids in a really honest way. the language the author uses to write the dialogue of the boys is so genuine and hilarious and the characters are so well developed. gets pretty sad at the end (spoiler: skippy does die) but it’s handled with grace and truth. fantastic read.\n\n\n\n Back to top"
   },
   {
-    "objectID": "books/safeareagorazde/index.html",
-    "href": "books/safeareagorazde/index.html",
-    "title": "Safe Area Goražde / Joe Sacco",
+    "objectID": "books/saynothing/index.html",
+    "href": "books/saynothing/index.html",
+    "title": "Say Nothing / Patrick Radden Keefe",
     "section": "",
-    "text": "finished 5/15/23\nlearned a ton from this book about the war in Bosnia and all of the horrifying things that happened during it. the art and writing style is so well done, and doesn’t romanticize any of the tragedies, but rather humanizes it all.\n\n\n\n Back to top"
+    "text": "finished 3/12/23\na book has never made me feel so un-informed (is that a word?). the Troubles were, and continue to be, such a tragedy for all of Ireland, and the people who were directly affected will carry it forever. there was no sugarcoating of anything, or pretending it wasn’t as bad as it was. i am really interested to see what becomes of the Belfast Project at Boston College - it was such a fascinating idea that ended up going completely awry. anyways, this piece of history is a huge can of worms and i think i’ve got a lot more reading to do about it but this book is phenomenally done.\n\n\n\n Back to top"
   },
   {
-    "objectID": "books/ourhideousprogeny/index.html",
-    "href": "books/ourhideousprogeny/index.html",
-    "title": "Our Hideous Progeny / C. E. McGill",
+    "objectID": "books/reproduction/index.html",
+    "href": "books/reproduction/index.html",
+    "title": "Reproduction / Ian Williams",
     "section": "",
-    "text": "finished 2/24/24\nthis was a really interesting one- i don’t think it’s one i ever would have picked out for myself, but mama got it for me for christmas and the cover art is wicked cool (but don’t judge a book by it’s cover) so i gave it a shot. it’s inspired by frankenstein and is about a woman and her idiot husband and the woman discovers her great-uncle’s research where he made a man come alive. mary and her dummy husband are both geologists and decide to try this on a plesiosaurus because why not and that’s the story. but also it’s about mary and her miscarriage and being a woman in the mid 19th century and having no autonomy or voice in a conversation and also it’s queer and mary has a thing for her stupid husband’s sister and it’s about grief and letting go of the things you love or once loved. i never watched that movie the way of water but based on the trailers i kind of imagined the Creature like the thing from that movie. i don’t know i really liked it because it didn’t try too hard to be something it wasn’t.\n\n\n\n Back to top"
+    "text": "finished 4/24/23\nall of the men were assholes in this book. there was a thing one of the characters brought up which was “contributing to the GDP of the house” and it was pretty funny because he was 36, in a serious amount of debt and living in his mom’s basement. you can tell a poet wrote this book. i like the switchups of narrative style, and there were a lot of plot points that came by surprise which was cool. the last section was a slog to get through, just because of the writing style, but damn did it make me think about how i consider families and love as intertwined concepts, and maybe they aren’t always in a matrix? i dunno\n\n\n\n Back to top"
   },
   {
-    "objectID": "books/neverletmego/index.html",
-    "href": "books/neverletmego/index.html",
-    "title": "Never Let Me Go / Kazuo Ishiguro",
+    "objectID": "books/nexus/index.html",
+    "href": "books/nexus/index.html",
+    "title": "Nexus: A Brief History of Information Networks from the Stone Age to AI / Yuval Noah Harari",
     "section": "",
-    "text": "finished 7/20/23\ni was really excited about this one because i have been meaning to read Kazuo Ishiguro’s stuff for awhile. this book really caught me off guard- the writing is really casual and then just throws in details like that the kids are being raised to donate their organs or that they are cloned from other people. overall i really liked it!\n\n\n\n Back to top"
+    "text": "finished 2/9/2025\nreally fascinating read. sometimes yuval just likes the sound of his own writing, so if you can look past that to the actual info, there is some pretty interesting stuff in here about information networks and how to actually get to the truth of something. also a really good history lesson on how important the internet and instant communication has become for our current government and societal structures as compared to when dissemination of information was slower and analog.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "books/myyearofrestandrelaxation/index.html",
+    "href": "books/myyearofrestandrelaxation/index.html",
+    "title": "My Year of Rest and Relaxation / Ottessa Moshfegh",
+    "section": "",
+    "text": "finished 5/10/25\nok this was weird. kind of really upsetting to read, especially as a young woman. i really liked the writing style, and how internal monologue-y it was- it felt really authentic to a real person’s stream of consciousness, and the narrator felt authentic. i didn’t really get it though. it seemed like at the end, her plan of being rich and sleeping for a year just kind of worked? and she was able to like get away with this ridiculousness because she is beautiful and wealthy and has surrounded herself with people who don’t hold her accountable? maybe that’s the point, that today if you have enough money and social status and manipulative powers, you can kind of do whatever. idk the ending made me feel icky, and i did not like ping xi also and i wanted someone to not be horrible by the end and have a bit of a character arc but they are all not good people and maybe that was the point. kind of funny also\n3.5/5\n\n\n\n Back to top"
   },
   {
     "objectID": "books/midnightinthegardenofgoodandevil/index.html",
@@ -357,172 +364,11 @@
     "text": "finished 7/1/23\nthis one was so so good. i picked it up in scotland because it was buy one get one half off and i needed the paperback of tomorrow and tomorrow and tomorrow so i just grabbed it because of the title. it’s really sad (about a husband grieving the death of his wife) but so brilliantly written. also the egg is hilarious.\n\n\n\n Back to top"
   },
   {
-    "objectID": "books/harrypotter/index.html",
-    "href": "books/harrypotter/index.html",
-    "title": "Harry Potter / J.K. Rowling",
+    "objectID": "books/hiddenfigures/index.html",
+    "href": "books/hiddenfigures/index.html",
+    "title": "Hidden Figures",
     "section": "",
-    "text": "been re-reading the harry potter series in an attempt to get out of my reading slump. just going to plop all of the reviews on one page here because seven hp pages seemed excessive.\nHarry Potter and the Sorcerer’s Stone\nso much fun- I really forgot how enjoyable these are to read.\nHarry Potter and the Chamber of Secrets\nsnake\nHarry Potter and the Prisoner of Azkaban\nbuckbeak + hagrid = &lt;3\nHarry Potter and the Goblet of Fire\nhermione’s dress is blue!! riot.\nHarry Potter and the Order of the Phoenix\ngod harry is such a little whiner in this one it’s unbearable.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "books/foundryside/index.html",
-    "href": "books/foundryside/index.html",
-    "title": "Foundryside / Robert Jackson Bennett",
-    "section": "",
-    "text": "finished 11/5/24\nthis was literally about a talking key named clef. kind of got better at the end? pretty dumb, but at least the magic portion was creative.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "books/dunemessiah/index.html",
-    "href": "books/dunemessiah/index.html",
-    "title": "Dune Messiah / Frank Herbert",
-    "section": "",
-    "text": "finished 5/3/24\nthis was tricky to get into because i had forgotten a lot of what happened in Dune, and was getting confused between the movies and the book. also i was confused because it starts after the 12 year jihad, which Paul literally spent all of the first book talking about preventing, and then this book started and was like “ok the jihad happened and billions of people died and Paul is Emperor ok go.” but overall i really liked it- i liked that Paul becomes more of a villain and the dynamic of group that is trying to kill him (they all kind of hate each other which was pretty funny even though the dictatorship wins in the end and they are all killed) and the plot was really enticing. was skeptical at first because the jihad was just kind of glossed over within the first couple chapters (it is revisited more in the rest of the book) and it seemed like a big thing to skip, but i can see why it wasn’t super relevant to include all the gory details after reading the whole book. good read!\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "books/cloudcuckooland/index.html",
-    "href": "books/cloudcuckooland/index.html",
-    "title": "Cloud Cuckoo Land / Anthony Doerr",
-    "section": "",
-    "text": "finished 7/16/23\ni really liked this one- mama said she didn’t like it so much because there wasn’t really a moral or something obvious to get out of it, which i think is why i really liked it. it was just a story about people telling stories, and there wasn’t any greater meaning that was being forced down my throat. also i love the name and the story cloud cuckoo land is really pretty funny. omeir’s oxen moonlight and tree broke my heart.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "books/bridgeofclay/index.html",
-    "href": "books/bridgeofclay/index.html",
-    "title": "Bridge of Clay / Marcus Zusak",
-    "section": "",
-    "text": "finished 11/8/23\nit’s lyrical and masterful, a lot like singing or riding a horse or telling a story, there’s a rhythm to it, it ebbs and flows. cried through the last 50 pages, made me feel boneless. god i love my family. the writing can make the story a bit confusing to follow, but it’s tragic and brilliant anyways. reminded me of this music: - gregory alan isakov (artist) - the bride and the bachelor / magnolian - girl in calico live with skylightcity string quartet / tow’rs\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "books/boysintheboat/index.html",
-    "href": "books/boysintheboat/index.html",
-    "title": "The Boys in the Boat / Daniel James Brown",
-    "section": "",
-    "text": "finished 4/23/24 - really want to watch the movie now - a little bit sappy, but a wicked story overall - super interesting to learn more about the 1936 Olympics under Hitler, and all of the insane propaganda and lying that was going on during the games - loved that the crew continued to get together to row on the 10 year anniversaries of their win\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "books/beforethecoffeegetscold/index.html",
-    "href": "books/beforethecoffeegetscold/index.html",
-    "title": "Before the coffee gets cold / Toshikazu Kawaguchi",
-    "section": "",
-    "text": "finished 1/17/24\naunt jody got me this one for christmas this year, and it was a really great read! it’s almost told in 4 different mini stories, but they all have the same base characters, which carries a nice continuity through the stories. mostly it’s just about people and their grief and how they choose to heal from it in very human ways. i wish i could read japanese, because i’m sure reading it without the barrier of translation is beautiful.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "books/beantrees/index.html",
-    "href": "books/beantrees/index.html",
-    "title": "The Bean Trees / Barbara Kingsolver",
-    "section": "",
-    "text": "finished 10/24/23\nmothers and daughters and the love between them. another brilliant one from barbara kingsolver.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "books/athousandacres/index.html",
-    "href": "books/athousandacres/index.html",
-    "title": "A Thousand Acres / Jane Smiley",
-    "section": "",
-    "text": "finished 3/18/23\ncontrary to what i assumed based on the author’s last name, this is not a happy book. i do understand why it won a pulitzer though- the writing is stunning and the characters (sans narrator) are so grossly horrible to each other in these intensely personal and pointed ways, which just proves the strength of smiley’s writing. makes me appreciate my own sisters and that i haven’t ever been mad enough to construct a premeditated murder plot based off of sausages in a jar.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "books/acotar/index.html",
-    "href": "books/acotar/index.html",
-    "title": "A Court of Thorns and Roses / Sarah J. Maas",
-    "section": "",
-    "text": "finished 6/4/23\nthis book was one i had resisted reading for a long time because it’s so controversial and didn’t really seem like something up my alley. i really did not like feyre (also how tf do you say that name) - she just made everything worse and generally was just a whiner. there were definitely some parts that were good plot-wise and the villain was fantastic, but overall i skimmed this one.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "books.html",
-    "href": "books.html",
-    "title": "books",
-    "section": "",
-    "text": "hey!\n\n\n\ncheck out the stats here\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Invisible Mountain / Carolina De Robertis\n\n\n\nfiction\n\nmagical realism\n\n\n\n\n\n\n\n\n\n\nJun 6, 2025\n\n\n\n\n\n\n\n\n\n\n\nTalking at Night / Claire Daverly\n\n\n\nfiction\n\n\n\n\n\n\n\n\n\n\nJun 6, 2025\n\n\n\n\n\n\n\n\n\n\n\nWithout You There Is No Us / Suki Kim\n\n\n\nnon-fiction\n\nhistory\n\n\n\n\n\n\n\n\n\n\nJun 4, 2025\n\n\n\n\n\n\n\n\n\n\n\nHidden Figures\n\n\n\nnon-fiction\n\nhistory\n\nscience\n\n52books25\n\nabcs25\n\n\n\n\n\n\n\n\n\n\nMay 14, 2025\n\n\n\n\n\n\n\n\n\n\n\nThe Five People You Meet in Heaven / Mitch Albom\n\n\n\nfiction\n\n\n\n\n\n\n\n\n\n\nMay 14, 2025\n\n\n\n\n\n\n\n\n\n\n\nGoing Clear: Scientology, Hollywood, and the Prison of Belief / Lawrence Wright\n\n\n\nnon-fiction\n\nabcs25\n\n\n\n\n\n\n\n\n\n\nMay 14, 2025\n\n\n\n\n\n\n\n\n\n\n\nThe Fury / Alex Michaelides\n\n\n\nfiction\n\n52books25\n\n\n\n\n\n\n\n\n\n\nMay 14, 2025\n\n\n\n\n\n\n\n\n\n\n\nShantaram / Gregory David Roberts\n\n\n\nfiction\n\n52books25\n\nabcs25\n\n\n\n\n\n\n\n\n\n\nMay 14, 2025\n\n\n\n\n\n\n\n\n\n\n\nNexus: A Brief History of Information Networks from the Stone Age to AI / Yuval Noah Harari\n\n\n\nnon-fiction\n\n52books25\n\nabcs25\n\n\n\n\n\n\n\n\n\n\nMay 14, 2025\n\n\n\n\n\n\n\n\n\n\n\nLibby Lost and Found / Stephanie Booth\n\n\n\nfiction\n\n52books25\n\nabcs25\n\n\n\n\n\n\n\n\n\n\nMay 14, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nMigrations / Charlotte McConaghy\n\n\n\nfiction\n\n52books25\n\nabcs25\n\n\n\n\n\n\n\n\n\n\nApr 30, 2025\n\n\n\n\n\n\n\n\n\n\n\nThe Poppy War / R.F. Kuang\n\n\n\nfiction\n\nfantasy\n\n\n\n\n\n\n\n\n\n\nApr 30, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nLet the Great World Spin / Colum McCann\n\n\n\nfiction\n\nabc24\n\nhistorical fiction\n\n52books24\n\n\n\n\n\n\n\n\n\n\nDec 1, 2024\n\n\n\n\n\n\n\n\n\n\n\nFoundryside / Robert Jackson Bennett\n\n\n\nfiction\n\nabc24\n\n52books24\n\nfantasy\n\n\n\n\n\n\n\n\n\n\nDec 1, 2024\n\n\n\n\n\n\n\n\n\n\n\nEducated / Tara Westover\n\n\n\nnon-fiction\n\nbiography\n\nabc24\n\n52books24\n\n\n\n\n\n\n\n\n\n\nDec 1, 2024\n\n\n\n\n\n\n\n\n\n\n\nUnbroken / Laura Hillenbrand\n\n\n\nnon-fiction\n\nabc24\n\nhistory\n\n\n\n\n\n\n\n\n\n\nDec 1, 2024\n\n\n\n\n\n\n\n\n\n\n\nSomewhere Beyond the Sea / T.J. Klune\n\n\n\nfiction\n\nabc24\n\n52books24\n\n\n\n\n\n\n\n\n\n\nSep 20, 2024\n\n\n\n\n\n\n\n\n\n\n\nThe Memoirs of Stockholm Sven / Nathaniel Ian Miller\n\n\n\nfiction\n\n52books24\n\nhistorical fiction\n\n\n\n\n\n\n\n\n\n\nMay 25, 2024\n\n\n\n\n\n\n\n\n\n\n\nDune Messiah / Frank Herbert\n\n\n\nfiction\n\n52books24\n\n\n\n\n\n\n\n\n\n\nMay 5, 2024\n\n\n\n\n\n\n\n\n\n\n\nThe Boys in the Boat / Daniel James Brown\n\n\n\nnon-fiction\n\nbiography\n\n52books24\n\n\n\n\n\n\n\n\n\n\nApr 28, 2024\n\n\n\n\n\n\n\n\n\n\n\nThe God of Small Things / Arundhati Roy\n\n\n\nfiction\n\n52books24\n\nabc24\n\n\n\n\n\n\n\n\n\n\nApr 12, 2024\n\n\n\n\n\n\n\n\n\n\n\nThe Perfect Storm / Sebastian Junger\n\n\n\nnon-fiction\n\nbiography\n\n52books24\n\n\n\n\n\n\n\n\n\n\nApr 12, 2024\n\n\n\n\n\n\n\n\n\n\n\nKing Zeno / Nathaniel Rich\n\n\n\nfiction\n\nhistorical fiction\n\n52books24\n\n\n\n\n\n\n\n\n\n\nMar 30, 2024\n\n\n\n\n\n\n\n\n\n\n\nKillers of the Flower Moon / David Grann\n\n\n\nnon-fiction\n\nabc24\n\n52books24\n\n\n\n\n\n\n\n\n\n\nMar 21, 2024\n\n\n\n\n\n\n\n\n\n\n\nThe Princess Bride / William Goldman\n\n\n\nfiction\n\n52books24\n\n\n\n\n\n\n\n\n\n\nMar 21, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nTom Lake / Ann Patchett\n\n\n\nfiction\n\n\n\n\n\n\n\n\n\n\nMar 3, 2024\n\n\n\n\n\n\n\n\n\n\n\nThe Complete Maus / Art Spiegelman\n\n\n\nnon-fiction\n\ngraphic novel\n\n52books24\n\n\n\n\n\n\n\n\n\n\nFeb 27, 2024\n\n\n\n\n\n\n\n\n\n\n\nOur Hideous Progeny / C. E. McGill\n\n\n\nfiction\n\nabc24\n\n\n\n\n\n\n\n\n\n\nFeb 26, 2024\n\n\n\n\n\n\n\n\n\n\n\nBabel: An Arcane History / R. F. Kuang\n\n\n\nfiction\n\n52books24\n\n\n\n\n\n\n\n\n\n\nFeb 26, 2024\n\n\n\n\n\n\n\n\n\n\n\nThe Dictionary of Lost Words\n\n\n\nfiction\n\nhistorical fiction\n\n52books24\n\nabc24\n\n\n\n\n\n\n\n\n\n\nFeb 1, 2024\n\n\n\n\n\n\n\n\n\n\n\nMidnight in the Garden of Good and Evil / John Berendt\n\n\n\nabc24\n\nnon-fiction\n\n\n\n\n\n\n\n\n\n\nJan 30, 2024\n\n\n\n\n\n\n\n\n\n\n\nWatchmen / Alan Moore, Dave Gibbons\n\n\n\nfiction\n\ngraphic novel\n\nabc24\n\n\n\n\n\n\n\n\n\n\nJan 23, 2024\n\n\n\n\n\n\n\n\n\n\n\nBefore the coffee gets cold / Toshikazu Kawaguchi\n\n\n\nfiction\n\nmagical realism\n\nabc24\n\n52books24\n\n\n\n\n\n\n\n\n\n\nJan 20, 2024\n\n\n\n\n\n\n\n\n\n\n\nThe Song of the Cell / Siddhartha Mukherjee\n\n\n\nnon-fiction\n\nscience\n\n\n\n\n\n\n\n\n\n\nJan 20, 2024\n\n\n\n\n\n\n\n\n\n\n\nAmerican Gods / Neil Gaiman\n\n\n\nfiction\n\n52books23\n\n\n\n\n\n\n\n\n\n\nDec 29, 2023\n\n\n\n\n\n\n\n\n\n\n\nThe Story of the Human Body / Daniel E. Lieberman\n\n\n\nnon-fiction\n\nscience\n\n\n\n\n\n\n\n\n\n\nDec 16, 2023\n\n\n\n\n\n\n\n\n\n\n\nThe Sweet Hereafter / Russell Banks\n\n\n\nfiction\n\n\n\n\n\n\n\n\n\n\nNov 27, 2023\n\n\n\n\n\n\n\n\n\n\n\nBridge of Clay / Marcus Zusak\n\n\n\nfiction\n\nfavorites\n\n\n\n\n\n\n\n\n\n\nNov 8, 2023\n\n\n\n\n\n\n\n\n\n\n\nHarry Potter / J.K. Rowling\n\n\n\nfiction\n\n\n\n\n\n\n\n\n\n\nNov 5, 2023\n\n\n\n\n\n\n\n\n\n\n\nThe Bean Trees / Barbara Kingsolver\n\n\n\nfiction\n\n\n\n\n\n\n\n\n\n\nNov 5, 2023\n\n\n\n\n\n\n\n\n\n\n\nNever Let Me Go / Kazuo Ishiguro\n\n\n\nfiction\n\n\n\n\n\n\n\n\n\n\nJul 20, 2023\n\n\n\n\n\n\n\n\n\n\n\nCloud Cuckoo Land / Anthony Doerr\n\n\n\n52books23\n\nfiction\n\n\n\n\n\n\n\n\n\n\nJul 20, 2023\n\n\n\n\n\n\n\n\n\n\n\nSkippy Dies / Paul Murray\n\n\n\nfiction\n\n\n\n\n\n\n\n\n\n\nJul 14, 2023\n\n\n\n\n\n\n\n\n\n\n\nIsaac and the Egg / Bobby Palmer\n\n\n\n52books23\n\nfiction\n\n\n\n\n\n\n\n\n\n\nJul 14, 2023\n\n\n\n\n\n\n\n\n\n\n\nBreathing Lessons / Anne Tyler\n\n\n\n52books23\n\nfiction\n\n\n\n\n\n\n\n\n\n\nJul 14, 2023\n\n\n\n\n\n\n\n\n\n\n\nThe Girl Who Kicked the Hornet’s Nest / Stieg Larsson\n\n\n\nfiction\n\n\n\n\n\n\n\n\n\n\nJul 14, 2023\n\n\n\n\n\n\n\n\n\n\n\nA Court of Mist and Fury / Sarah J. Maas\n\n\n\nfiction\n\nfantasy\n\n\n\n\n\n\n\n\n\n\nJul 14, 2023\n\n\n\n\n\n\n\n\n\n\n\nLiar and Spy / Rebecca Stead\n\n\n\nfiction\n\n\n\n\n\n\n\n\n\n\nJul 14, 2023\n\n\n\n\n\n\n\n\n\n\n\nA Court of Thorns and Roses / Sarah J. Maas\n\n\n\nfiction\n\n52books23\n\nfantasy\n\n\n\n\n\n\n\n\n\n\nJul 14, 2023\n\n\n\n\n\n\n\n\n\n\n\nTo Kill a Mockingbird / Harper Lee\n\n\n\nfavorites\n\nfiction\n\n\n\n\n\n\n\n\n\n\nMay 31, 2023\n\n\n\n\n\n\n\n\n\n\n\nSafe Area Goražde / Joe Sacco\n\n\n\n52books23\n\nnon-fiction\n\nhistory\n\n\n\n\n\n\n\n\n\n\nMay 25, 2023\n\n\n\n\n\n\n\n\n\n\n\nLittle Bee / Chris Cleave\n\n\n\nfiction\n\n\n\n\n\n\n\n\n\n\nMay 25, 2023\n\n\n\n\n\n\n\n\n\n\n\nThe Girl Who Played with Fire / Stieg Larsson\n\n\n\n52books23\n\nfiction\n\n\n\n\n\n\n\n\n\n\nMay 18, 2023\n\n\n\n\n\n\n\n\n\n\n\nReproduction / Ian Williams\n\n\n\n52books23\n\nfiction\n\n\n\n\n\n\n\n\n\n\nApr 24, 2023\n\n\n\n\n\n\n\n\n\n\n\nCloud Atlas / David Mitchell\n\n\n\n52books23\n\nfiction\n\n\n\n\n\n\n\n\n\n\nApr 21, 2023\n\n\n\n\n\n\n\n\n\n\n\nDemon Copperhead / Barbara Kingsolver\n\n\n\n52books23\n\nfiction\n\n\n\n\n\n\n\n\n\n\nApr 2, 2023\n\n\n\n\n\n\n\n\n\n\n\nA Thousand Acres / Jane Smiley\n\n\n\n52books23\n\nfiction\n\n\n\n\n\n\n\n\n\n\nMar 19, 2023\n\n\n\n\n\n\n\n\n\n\n\nSay Nothing / Patrick Radden Keefe\n\n\n\n52books23\n\nhistory\n\nnon-fiction\n\n\n\n\n\n\n\n\n\n\nMar 16, 2023\n\n\n\n\n\n\n\n\n\n\n\nThe Spirit Catches You and You Fall Down / Anne Fadiman\n\n\n\n52books23\n\nnon-fiction\n\n\n\n\n\n\n\n\n\n\nFeb 28, 2023\n\n\n\n\n\n\n\n\n\n\n\nThe House in the Cerulean Sea / TJ Klune\n\n\n\nfavorites\n\nfiction\n\n\n\n\n\n\n\n\n\n\nFeb 14, 2023\n\n\n\n\n\n\n\n\n\n\n\nBecoming / Michelle Obama\n\n\n\nnon-fiction\n\nbiography\n\n\n\n\n\n\n\n\n\n\nFeb 6, 2023\n\n\n\n\n\n\n\n\n\n\n\nThe Healing of America / T. R. Reid\n\n\n\n52books23\n\nnon-fiction\n\n\n\n\n\n\n\n\n\n\nFeb 6, 2023\n\n\n\n\n\n\n\n\n\n\n\nWhat the Fireflies Knew / Kai Harris\n\n\n\nfiction\n\n\n\n\n\n\n\n\n\n\nFeb 6, 2023\n\n\n\n\n\n\n\n\n\n\n\nTomorrow, and Tomorrow, and Tomorrow / Gabrielle Zevin\n\n\n\n52books23\n\nfiction\n\n\n\n\n\n\n\n\n\n\nFeb 6, 2023\n\n\n\n\n\n\n\n\n\n\n\nBel Canto / Ann Patchett\n\n\n\n52books23\n\nfiction\n\n\n\n\n\n\n\n\n\n\nFeb 5, 2023\n\n\n\n\n\n\nNo matching items\n\n  \n\n Back to top"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "about",
-    "section": "",
-    "text": "just a kid running around pretending to be a fake-adult. i like to read and listen to music and people watch and play video games and hang out with my friends in the middle of the street late at night and exercise and learn new things. i unabashedly call my mom or dad most everyday and have a collection of mini things on my windowsill and am deadly afraid of being bored and alone (both separately and at once). this is just where i dump things to feel like i am giving my brain a shower, or get the tv static out of my joints and brain.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "2023reading.html",
-    "href": "2023reading.html",
-    "title": "2023 books",
-    "section": "",
-    "text": "been looking for some reading projects and have successfully found a couple! will (hopefully) be updating this as i check categories off\n\n52 book club 2023 challenge\nbooks for this challenge are tagged with 52books23\nlink -&gt; https://www.the52book.club/2023-reading-challenge/\n1 - book with a subtitle: Say Nothing: A True Story of Murder and Memory in Northern Ireland\n2 - featuring an inheritance: Reproduction - at least one that’s sought after\n3 - starts with a G: The Girl Who Played With Fire\n4 - starts with an H: The Healing of America\n5 - starts with an I: Isaac and the Egg\n6 - under 200 pages: By the River Piedra I Sat Down and Wept\n7 - city or country name in the title: American Gods\n8 - dystopian fiction: Cloud Atlas - one of the storylines is dystopian, so that counts right?\n11 - book about secrets: A Thousand Acres\n12 - high fantasy: A Court of Thorns and Roses\n14 - a survival story: Demon Copperhead\n18 - set during a war other than WWI or WWII: Safe Area Goražde\n20 - book about siblings: Bridge of Clay\n21 - second-hand book: The Spirit Catches You and You Fall Down - honestly 90% of my books are secondhand so this was an easy one\n26 - has an epilogue: Bel Canto - it’s a garbage one but it’s there\n28 - includes a funeral: Breathing Lessons\n29 - sends you down a rabbit hole: Tomorrow and Tomorrow and Tomorrow - maybe i should get into game design\n35 - a book you meant to read last year: Cloud Cuckoo Land\n\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "2024reading.html",
-    "href": "2024reading.html",
-    "title": "2024 books",
-    "section": "",
-    "text": "list of 2024 reading challenges\n\n52 book club 2024 challenge\nbooks for this challenge are tagged with #52books24\n\nlink -&gt; https://www.the52book.club/2024-reading-challenge/\nchallenge guide link -&gt; https://www.the52book.club/2024-challenge-guide/\n\n\n\nPrompt\nBook\n\n\n\n\n4. Lowercase letters on the spine\nBefore the coffee gets cold\n\n\n7. At least 4 different POV\nLet the Great World Spin\n\n\n8. Features the ocean\nThe Perfect Storm\n\n\n9. A character-driven novel\nBabel: An Arcane History\n\n\n10. Told in non-chronological order\nEducated\n\n\n11. Title starting with the letter “K”\nKillers of the Flower Moon\n\n\n25. An author “everyone” has read except you\nDune Messiah\n\n\n26. Hybrid genre\nThe Complete Maus\n\n\n28. A yellow spine\nSomewhere Beyond the Sea\n\n\n30. Picked without reading the blurb\nThe God of Small Things\n\n\n36. Has futuristic technology\nFoundryside\n\n\n38. Published by Hachette\nThe Memoirs of Stockholm Sven\n\n\n41. A sticker on the cover\nTom Lake\n\n\n43. About finding identity\nThe Boys in the Boat\n\n\n44. Includes a wedding\nThe Princess Bride\n\n\n45. Chapter headings have dates\nThe Dictionary of Lost Words\n\n\n50. A musical instrument on the cover\nKing Zeno\n\n\n\n\n\nread the alphabet\nbooks for this challenge are tagged with #abc24\nA.\nB. Before the coffee gets cold\nC.\nD. The Dictionary of Lost Words\nE. Educated\nF. Foundryside\nG. The God of Small Things\nH.\nI.\nJ.\nK. Killers of the Flower Moon\nL. Let the Great World Spin\nM. Midnight in the Garden of Good and Evil\nN.\nO. Our Hideous Progeny\nP.\nQ.\nR.\nS. Somewhere Beyond the Sea\nT. Tom Lake\nU. Unbroken\nV.\nW. Watchmen\nX.\nY.\nZ.\n\n\nother challenges i am using for inspiration\nAustine Decker’s Beat the Backlist\n\n\nlast year\n2023 reading\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "alltimebookstats.html",
-    "href": "alltimebookstats.html",
-    "title": "all-time book stats",
-    "section": "",
-    "text": "all time meaning the whole time i have been tracking this nerd shit\n\nall time books by month\n\n\nCode\nimport matplotlib.pyplot as plt\nimport pandas as pd\nimport seaborn as sns\nimport plotly.express as px\n\n\nmonths = ['jan 24', 'feb 24', 'mar 24', 'apr 24', 'may 24', 'jun 24', 'jul 24', 'aug 24', 'sep 24', 'oct 24', 'nov 24', 'dec 24', 'jan 25', 'feb 25', 'mar 25', 'apr 25', 'may 25']\ncounts = [5, 4, 3, 3, 2, 1, 0, 0, 1, 3, 1, 3, 1, 2, 1, 5, 1]\n\nd = {'month': months, 'books': counts}\n\n\ndf = pd.DataFrame(data=d)\n\n\n# fig, ax = plt.subplots()\n# ax.plot(months, counts, '#df3a26', **{'marker': 'o'})\n# ax.set_xlabel('month')\n# ax.set_ylabel('# books read')\n# plt.show()\n\nfig = px.line(df, x=\"month\", y=\"books\", title='books read by month', markers=True)\nfig.show()\n\n\n        \n        \n        \n\n\n                            \n                                            \n\n\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "books/acomaf/index.html",
-    "href": "books/acomaf/index.html",
-    "title": "A Court of Mist and Fury / Sarah J. Maas",
-    "section": "",
-    "text": "finished 6/10/23\nyeah this was also pretty dumb, i skimmed most of it.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "books/americangods/index.html",
-    "href": "books/americangods/index.html",
-    "title": "American Gods / Neil Gaiman",
-    "section": "",
-    "text": "finished 12/28/23\ndefinitely adding this one to my re-read list. the story is so complex, and it’s really impressive how given that, the story is still clear and easy to understand. i love the characters because even though they are supposed to be gods, they are really closer to real people. they have flaws and and can die and want to be loved. i want to read the comic because i wonder how the visuals in my head compare to how Gaiman envisioned them. i don’t know, i really liked this one.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "books/babel/index.html",
-    "href": "books/babel/index.html",
-    "title": "Babel: An Arcane History / R. F. Kuang",
-    "section": "",
-    "text": "finished 2/20/24\nthis was brilliant. the characters are so dense and real and the story is intriguing and full of mystery and adventure and surprises and i loved it. i especially loved how love was portrayed- the themes of navigating platonic love when the other person has huge differences of opinion or just generally when rifts appear in a friendship are so well done. also, the discussions of colonialism and how not to be blind in your privilege are well expanded and really well navigated. definitely the second half of the book got way more adventurous and exciting than i thought it would, just based on the slower pace of the beginning, but it made sense with the building presence of the Hermes Society and things just finally becoming unavoidable. overall extraordinary.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "books/becoming/index.html",
-    "href": "books/becoming/index.html",
-    "title": "Becoming / Michelle Obama",
-    "section": "",
-    "text": "finished 1/16/23\nMade me and my icy heart cry like a baby. A realistic story about a person who refuses to be a shadow, and is endlessly driven to use her platform for action in a society that resists with all its strength. Also, the pictures are so cute.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "books/belcanto/index.html",
-    "href": "books/belcanto/index.html",
-    "title": "Bel Canto / Ann Patchett",
-    "section": "",
-    "text": "finished 2/5/23\nThis book was so wonderfully written, but the ending was such a cop out. If you read it, skip the epilogue and enjoy the singing and the people as they stand in the grass under the sun and in love with those they should hate.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "books/breathinglessons/index.html",
-    "href": "books/breathinglessons/index.html",
-    "title": "Breathing Lessons / Anne Tyler",
-    "section": "",
-    "text": "finished 6/30/23\nthis one was pretty slow, but i really liked it. tells the story of maggie and ira as they go on a road trip to go to an old friend’s funeral. lots of talk about family, and how much work a marriage is, and how to love the ones we love when they make decisions we wouldn’t make ourselves.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "books/cloudatlas/index.html",
-    "href": "books/cloudatlas/index.html",
-    "title": "Cloud Atlas / David Mitchell",
-    "section": "",
-    "text": "finished 4/20/23 already want to re-read this one. the characters are so individualized, which is super impressive given that there are 6 different storylines in significantly different settings, that somehow manage to be woven together in this beautiful and elegant way. can’t begin to understand how you think of or write something this complex, but this book is phenomenal nonetheless.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "books/demoncopperhead/index.html",
-    "href": "books/demoncopperhead/index.html",
-    "title": "Demon Copperhead / Barbara Kingsolver",
-    "section": "",
-    "text": "finished 4/2/23\nThis was really damn good. It was interesting reading kingsolver writing a male narrator because so far I’ve only read ones of hers that are narrated by women. The writing style is stunning, because she figured out a way to give an accurate voice to this uneducated, wicked smart kid that doesn’t dumb him down or make him unrelatable. Demon’s blunt self-awareness of his self destruction at the end is so heartbreaking, but I liked the ending I think. The biggest part that resonated with me was the whole thing about the city vs. the green grass and always wanting to be back with who and where you came from and not liking the dead quiet that exists without cicadas or the rain or birds. I’m a little homesick.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "books/educated/index.html",
-    "href": "books/educated/index.html",
-    "title": "Educated / Tara Westover",
-    "section": "",
-    "text": "finished 10/17/24\na really powerful read about family and growth and the importance of your own knowledge. parts were really hard to read, but i have so much respect for the author and her conviction in herself.\n\n\n\n Back to top"
+    "text": "finished 2/16/25\ni really wanted to like this more than i did- the story is so amazing and fascinating, but was told in a way that i found really hard to follow. doesn’t take away from the absolute coolness of the women the book is about though.\n\n\n\n Back to top"
   },
   {
     "objectID": "books/goingclear/index.html",
@@ -532,11 +378,179 @@
     "text": "finished 3/11/25\nhey, did you guys know that scientology is insane? ron was just on a boat as “commodore” running around because they were in legal trouble in so many countries that they couldn’t go into most ports. also, they actually think that L. Ron Hubbard has been in space (in a previous life) and that it’s warm up there? in all seriousness, this book is a terrifying look into a cult that wraps you up and never lets you leave. the Rehabilitation Project Force is so scary, and the many stories of people who have attempted to leave the church, only to be stalked and coaxed back in is really upsetting. a scary look at the power of ignorance and the influence of fame and also all of the insane shit they did during operation snow white and just generally all of the insane shit ron and david miscavige have done.\nsidenote: crazy scientology website here (article about ron seeing space wars here)\n\n\n\n Back to top"
   },
   {
-    "objectID": "books/hiddenfigures/index.html",
-    "href": "books/hiddenfigures/index.html",
-    "title": "Hidden Figures",
+    "objectID": "books/educated/index.html",
+    "href": "books/educated/index.html",
+    "title": "Educated / Tara Westover",
     "section": "",
-    "text": "finished 2/16/25\ni really wanted to like this more than i did- the story is so amazing and fascinating, but was told in a way that i found really hard to follow. doesn’t take away from the absolute coolness of the women the book is about though.\n\n\n\n Back to top"
+    "text": "finished 10/17/24\na really powerful read about family and growth and the importance of your own knowledge. parts were really hard to read, but i have so much respect for the author and her conviction in herself.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "books/demoncopperhead/index.html",
+    "href": "books/demoncopperhead/index.html",
+    "title": "Demon Copperhead / Barbara Kingsolver",
+    "section": "",
+    "text": "finished 4/2/23\nThis was really damn good. It was interesting reading kingsolver writing a male narrator because so far I’ve only read ones of hers that are narrated by women. The writing style is stunning, because she figured out a way to give an accurate voice to this uneducated, wicked smart kid that doesn’t dumb him down or make him unrelatable. Demon’s blunt self-awareness of his self destruction at the end is so heartbreaking, but I liked the ending I think. The biggest part that resonated with me was the whole thing about the city vs. the green grass and always wanting to be back with who and where you came from and not liking the dead quiet that exists without cicadas or the rain or birds. I’m a little homesick.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "books/cloudatlas/index.html",
+    "href": "books/cloudatlas/index.html",
+    "title": "Cloud Atlas / David Mitchell",
+    "section": "",
+    "text": "finished 4/20/23 already want to re-read this one. the characters are so individualized, which is super impressive given that there are 6 different storylines in significantly different settings, that somehow manage to be woven together in this beautiful and elegant way. can’t begin to understand how you think of or write something this complex, but this book is phenomenal nonetheless.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "books/breathinglessons/index.html",
+    "href": "books/breathinglessons/index.html",
+    "title": "Breathing Lessons / Anne Tyler",
+    "section": "",
+    "text": "finished 6/30/23\nthis one was pretty slow, but i really liked it. tells the story of maggie and ira as they go on a road trip to go to an old friend’s funeral. lots of talk about family, and how much work a marriage is, and how to love the ones we love when they make decisions we wouldn’t make ourselves.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "books/belcanto/index.html",
+    "href": "books/belcanto/index.html",
+    "title": "Bel Canto / Ann Patchett",
+    "section": "",
+    "text": "finished 2/5/23\nThis book was so wonderfully written, but the ending was such a cop out. If you read it, skip the epilogue and enjoy the singing and the people as they stand in the grass under the sun and in love with those they should hate.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "books/becoming/index.html",
+    "href": "books/becoming/index.html",
+    "title": "Becoming / Michelle Obama",
+    "section": "",
+    "text": "finished 1/16/23\nMade me and my icy heart cry like a baby. A realistic story about a person who refuses to be a shadow, and is endlessly driven to use her platform for action in a society that resists with all its strength. Also, the pictures are so cute.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "books/babel/index.html",
+    "href": "books/babel/index.html",
+    "title": "Babel: An Arcane History / R. F. Kuang",
+    "section": "",
+    "text": "finished 2/20/24\nthis was brilliant. the characters are so dense and real and the story is intriguing and full of mystery and adventure and surprises and i loved it. i especially loved how love was portrayed- the themes of navigating platonic love when the other person has huge differences of opinion or just generally when rifts appear in a friendship are so well done. also, the discussions of colonialism and how not to be blind in your privilege are well expanded and really well navigated. definitely the second half of the book got way more adventurous and exciting than i thought it would, just based on the slower pace of the beginning, but it made sense with the building presence of the Hermes Society and things just finally becoming unavoidable. overall extraordinary.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "books/americangods/index.html",
+    "href": "books/americangods/index.html",
+    "title": "American Gods / Neil Gaiman",
+    "section": "",
+    "text": "finished 12/28/23\ndefinitely adding this one to my re-read list. the story is so complex, and it’s really impressive how given that, the story is still clear and easy to understand. i love the characters because even though they are supposed to be gods, they are really closer to real people. they have flaws and and can die and want to be loved. i want to read the comic because i wonder how the visuals in my head compare to how Gaiman envisioned them. i don’t know, i really liked this one.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "books/acomaf/index.html",
+    "href": "books/acomaf/index.html",
+    "title": "A Court of Mist and Fury / Sarah J. Maas",
+    "section": "",
+    "text": "finished 6/10/23\nyeah this was also pretty dumb, i skimmed most of it.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "alltimebookstats.html",
+    "href": "alltimebookstats.html",
+    "title": "all-time book stats",
+    "section": "",
+    "text": "all time meaning the whole time i have been tracking this nerd shit\n\nall time books by month\n\n\nCode\nimport matplotlib.pyplot as plt\nimport pandas as pd\nimport seaborn as sns\nimport plotly.express as px\n\n\nmonths = ['jan 24', 'feb 24', 'mar 24', 'apr 24', 'may 24', 'jun 24', 'jul 24', 'aug 24', 'sep 24', 'oct 24', 'nov 24', 'dec 24', 'jan 25', 'feb 25', 'mar 25', 'apr 25', 'may 25']\ncounts = [5, 4, 3, 3, 2, 1, 0, 0, 1, 3, 1, 3, 1, 2, 1, 5, 1]\n\nd = {'month': months, 'books': counts}\n\n\ndf = pd.DataFrame(data=d)\n\n\n# fig, ax = plt.subplots()\n# ax.plot(months, counts, '#df3a26', **{'marker': 'o'})\n# ax.set_xlabel('month')\n# ax.set_ylabel('# books read')\n# plt.show()\n\nfig = px.line(df, x=\"month\", y=\"books\", title='books read by month', markers=True)\nfig.show()\n\n\n        \n        \n        \n\n\n                            \n                                            \n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "2024reading.html",
+    "href": "2024reading.html",
+    "title": "2024 books",
+    "section": "",
+    "text": "list of 2024 reading challenges\n\n52 book club 2024 challenge\nbooks for this challenge are tagged with #52books24\n\nlink -&gt; https://www.the52book.club/2024-reading-challenge/\nchallenge guide link -&gt; https://www.the52book.club/2024-challenge-guide/\n\n\n\nPrompt\nBook\n\n\n\n\n4. Lowercase letters on the spine\nBefore the coffee gets cold\n\n\n7. At least 4 different POV\nLet the Great World Spin\n\n\n8. Features the ocean\nThe Perfect Storm\n\n\n9. A character-driven novel\nBabel: An Arcane History\n\n\n10. Told in non-chronological order\nEducated\n\n\n11. Title starting with the letter “K”\nKillers of the Flower Moon\n\n\n25. An author “everyone” has read except you\nDune Messiah\n\n\n26. Hybrid genre\nThe Complete Maus\n\n\n28. A yellow spine\nSomewhere Beyond the Sea\n\n\n30. Picked without reading the blurb\nThe God of Small Things\n\n\n36. Has futuristic technology\nFoundryside\n\n\n38. Published by Hachette\nThe Memoirs of Stockholm Sven\n\n\n41. A sticker on the cover\nTom Lake\n\n\n43. About finding identity\nThe Boys in the Boat\n\n\n44. Includes a wedding\nThe Princess Bride\n\n\n45. Chapter headings have dates\nThe Dictionary of Lost Words\n\n\n50. A musical instrument on the cover\nKing Zeno\n\n\n\n\n\nread the alphabet\nbooks for this challenge are tagged with #abc24\nA.\nB. Before the coffee gets cold\nC.\nD. The Dictionary of Lost Words\nE. Educated\nF. Foundryside\nG. The God of Small Things\nH.\nI.\nJ.\nK. Killers of the Flower Moon\nL. Let the Great World Spin\nM. Midnight in the Garden of Good and Evil\nN.\nO. Our Hideous Progeny\nP.\nQ.\nR.\nS. Somewhere Beyond the Sea\nT. Tom Lake\nU. Unbroken\nV.\nW. Watchmen\nX.\nY.\nZ.\n\n\nother challenges i am using for inspiration\nAustine Decker’s Beat the Backlist\n\n\nlast year\n2023 reading\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "2023reading.html",
+    "href": "2023reading.html",
+    "title": "2023 books",
+    "section": "",
+    "text": "been looking for some reading projects and have successfully found a couple! will (hopefully) be updating this as i check categories off\n\n52 book club 2023 challenge\nbooks for this challenge are tagged with 52books23\nlink -&gt; https://www.the52book.club/2023-reading-challenge/\n1 - book with a subtitle: Say Nothing: A True Story of Murder and Memory in Northern Ireland\n2 - featuring an inheritance: Reproduction - at least one that’s sought after\n3 - starts with a G: The Girl Who Played With Fire\n4 - starts with an H: The Healing of America\n5 - starts with an I: Isaac and the Egg\n6 - under 200 pages: By the River Piedra I Sat Down and Wept\n7 - city or country name in the title: American Gods\n8 - dystopian fiction: Cloud Atlas - one of the storylines is dystopian, so that counts right?\n11 - book about secrets: A Thousand Acres\n12 - high fantasy: A Court of Thorns and Roses\n14 - a survival story: Demon Copperhead\n18 - set during a war other than WWI or WWII: Safe Area Goražde\n20 - book about siblings: Bridge of Clay\n21 - second-hand book: The Spirit Catches You and You Fall Down - honestly 90% of my books are secondhand so this was an easy one\n26 - has an epilogue: Bel Canto - it’s a garbage one but it’s there\n28 - includes a funeral: Breathing Lessons\n29 - sends you down a rabbit hole: Tomorrow and Tomorrow and Tomorrow - maybe i should get into game design\n35 - a book you meant to read last year: Cloud Cuckoo Land\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "about",
+    "section": "",
+    "text": "just a kid running around pretending to be a fake-adult. i like to read and listen to music and people watch and play video games and hang out with my friends in the middle of the street late at night and exercise and learn new things. i unabashedly call my mom or dad most everyday and have a collection of mini things on my windowsill and am deadly afraid of being bored and alone (both separately and at once). this is just where i dump things to feel like i am giving my brain a shower, or get the tv static out of my joints and brain.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "books.html",
+    "href": "books.html",
+    "title": "books",
+    "section": "",
+    "text": "hey!\n\n\n\ncheck out the stats here\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIf We Were Villains / M.L. Rio\n\n\n\nabcs25\n\nfiction\n\n\n\n\n\n\n\n\n\n\nJun 8, 2025\n\n\n\n\n\n\n\n\n\n\n\nThe Invisible Mountain / Carolina De Robertis\n\n\n\nfiction\n\nmagical realism\n\n52books25\n\n\n\n\n\n\n\n\n\n\nJun 6, 2025\n\n\n\n\n\n\n\n\n\n\n\nTalking at Night / Claire Daverly\n\n\n\nfiction\n\nabcs25\n\n\n\n\n\n\n\n\n\n\nJun 6, 2025\n\n\n\n\n\n\n\n\n\n\n\nWithout You There Is No Us / Suki Kim\n\n\n\nnon-fiction\n\nhistory\n\nabcs25\n\n\n\n\n\n\n\n\n\n\nJun 4, 2025\n\n\n\n\n\n\n\n\n\n\n\nThe Storied Life of A.J. Fikry / Gabrielle Zevin\n\n\n\nfiction\n\n\n\n\n\n\n\n\n\n\nMay 23, 2025\n\n\n\n\n\n\n\n\n\n\n\nHidden Figures\n\n\n\nnon-fiction\n\nhistory\n\nscience\n\n52books25\n\nabcs25\n\n\n\n\n\n\n\n\n\n\nMay 14, 2025\n\n\n\n\n\n\n\n\n\n\n\nThe Five People You Meet in Heaven / Mitch Albom\n\n\n\nfiction\n\n\n\n\n\n\n\n\n\n\nMay 14, 2025\n\n\n\n\n\n\n\n\n\n\n\nGoing Clear: Scientology, Hollywood, and the Prison of Belief / Lawrence Wright\n\n\n\nnon-fiction\n\nabcs25\n\n\n\n\n\n\n\n\n\n\nMay 14, 2025\n\n\n\n\n\n\n\n\n\n\n\nThe Fury / Alex Michaelides\n\n\n\nfiction\n\n52books25\n\n\n\n\n\n\n\n\n\n\nMay 14, 2025\n\n\n\n\n\n\n\n\n\n\n\nShantaram / Gregory David Roberts\n\n\n\nfiction\n\n52books25\n\nabcs25\n\n\n\n\n\n\n\n\n\n\nMay 14, 2025\n\n\n\n\n\n\n\n\n\n\n\nNexus: A Brief History of Information Networks from the Stone Age to AI / Yuval Noah Harari\n\n\n\nnon-fiction\n\n52books25\n\nabcs25\n\n\n\n\n\n\n\n\n\n\nMay 14, 2025\n\n\n\n\n\n\n\n\n\n\n\nLibby Lost and Found / Stephanie Booth\n\n\n\nfiction\n\n52books25\n\nabcs25\n\n\n\n\n\n\n\n\n\n\nMay 14, 2025\n\n\n\n\n\n\n\n\n\n\n\nMy Year of Rest and Relaxation / Ottessa Moshfegh\n\n\n\nfiction\n\n52books25\n\n\n\n\n\n\n\n\n\n\nMay 12, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nMigrations / Charlotte McConaghy\n\n\n\nfiction\n\n52books25\n\nabcs25\n\n\n\n\n\n\n\n\n\n\nApr 30, 2025\n\n\n\n\n\n\n\n\n\n\n\nThe Poppy War / R.F. Kuang\n\n\n\nfiction\n\nfantasy\n\n\n\n\n\n\n\n\n\n\nApr 30, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nLet the Great World Spin / Colum McCann\n\n\n\nfiction\n\nabc24\n\nhistorical fiction\n\n52books24\n\n\n\n\n\n\n\n\n\n\nDec 1, 2024\n\n\n\n\n\n\n\n\n\n\n\nFoundryside / Robert Jackson Bennett\n\n\n\nfiction\n\nabc24\n\n52books24\n\nfantasy\n\n\n\n\n\n\n\n\n\n\nDec 1, 2024\n\n\n\n\n\n\n\n\n\n\n\nEducated / Tara Westover\n\n\n\nnon-fiction\n\nbiography\n\nabc24\n\n52books24\n\n\n\n\n\n\n\n\n\n\nDec 1, 2024\n\n\n\n\n\n\n\n\n\n\n\nUnbroken / Laura Hillenbrand\n\n\n\nnon-fiction\n\nabc24\n\nhistory\n\n\n\n\n\n\n\n\n\n\nDec 1, 2024\n\n\n\n\n\n\n\n\n\n\n\nSomewhere Beyond the Sea / T.J. Klune\n\n\n\nfiction\n\nabc24\n\n52books24\n\n\n\n\n\n\n\n\n\n\nSep 20, 2024\n\n\n\n\n\n\n\n\n\n\n\nThe Memoirs of Stockholm Sven / Nathaniel Ian Miller\n\n\n\nfiction\n\n52books24\n\nhistorical fiction\n\n\n\n\n\n\n\n\n\n\nMay 25, 2024\n\n\n\n\n\n\n\n\n\n\n\nDune Messiah / Frank Herbert\n\n\n\nfiction\n\n52books24\n\n\n\n\n\n\n\n\n\n\nMay 5, 2024\n\n\n\n\n\n\n\n\n\n\n\nThe Boys in the Boat / Daniel James Brown\n\n\n\nnon-fiction\n\nbiography\n\n52books24\n\n\n\n\n\n\n\n\n\n\nApr 28, 2024\n\n\n\n\n\n\n\n\n\n\n\nThe God of Small Things / Arundhati Roy\n\n\n\nfiction\n\n52books24\n\nabc24\n\n\n\n\n\n\n\n\n\n\nApr 12, 2024\n\n\n\n\n\n\n\n\n\n\n\nThe Perfect Storm / Sebastian Junger\n\n\n\nnon-fiction\n\nbiography\n\n52books24\n\n\n\n\n\n\n\n\n\n\nApr 12, 2024\n\n\n\n\n\n\n\n\n\n\n\nKing Zeno / Nathaniel Rich\n\n\n\nfiction\n\nhistorical fiction\n\n52books24\n\n\n\n\n\n\n\n\n\n\nMar 30, 2024\n\n\n\n\n\n\n\n\n\n\n\nKillers of the Flower Moon / David Grann\n\n\n\nnon-fiction\n\nabc24\n\n52books24\n\n\n\n\n\n\n\n\n\n\nMar 21, 2024\n\n\n\n\n\n\n\n\n\n\n\nThe Princess Bride / William Goldman\n\n\n\nfiction\n\n52books24\n\n\n\n\n\n\n\n\n\n\nMar 21, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nTom Lake / Ann Patchett\n\n\n\nfiction\n\n\n\n\n\n\n\n\n\n\nMar 3, 2024\n\n\n\n\n\n\n\n\n\n\n\nThe Complete Maus / Art Spiegelman\n\n\n\nnon-fiction\n\ngraphic novel\n\n52books24\n\n\n\n\n\n\n\n\n\n\nFeb 27, 2024\n\n\n\n\n\n\n\n\n\n\n\nOur Hideous Progeny / C. E. McGill\n\n\n\nfiction\n\nabc24\n\n\n\n\n\n\n\n\n\n\nFeb 26, 2024\n\n\n\n\n\n\n\n\n\n\n\nBabel: An Arcane History / R. F. Kuang\n\n\n\nfiction\n\n52books24\n\n\n\n\n\n\n\n\n\n\nFeb 26, 2024\n\n\n\n\n\n\n\n\n\n\n\nThe Dictionary of Lost Words\n\n\n\nfiction\n\nhistorical fiction\n\n52books24\n\nabc24\n\n\n\n\n\n\n\n\n\n\nFeb 1, 2024\n\n\n\n\n\n\n\n\n\n\n\nMidnight in the Garden of Good and Evil / John Berendt\n\n\n\nabc24\n\nnon-fiction\n\n\n\n\n\n\n\n\n\n\nJan 30, 2024\n\n\n\n\n\n\n\n\n\n\n\nWatchmen / Alan Moore, Dave Gibbons\n\n\n\nfiction\n\ngraphic novel\n\nabc24\n\n\n\n\n\n\n\n\n\n\nJan 23, 2024\n\n\n\n\n\n\n\n\n\n\n\nBefore the coffee gets cold / Toshikazu Kawaguchi\n\n\n\nfiction\n\nmagical realism\n\nabc24\n\n52books24\n\n\n\n\n\n\n\n\n\n\nJan 20, 2024\n\n\n\n\n\n\n\n\n\n\n\nThe Song of the Cell / Siddhartha Mukherjee\n\n\n\nnon-fiction\n\nscience\n\n\n\n\n\n\n\n\n\n\nJan 20, 2024\n\n\n\n\n\n\n\n\n\n\n\nAmerican Gods / Neil Gaiman\n\n\n\nfiction\n\n52books23\n\n\n\n\n\n\n\n\n\n\nDec 29, 2023\n\n\n\n\n\n\n\n\n\n\n\nThe Story of the Human Body / Daniel E. Lieberman\n\n\n\nnon-fiction\n\nscience\n\n\n\n\n\n\n\n\n\n\nDec 16, 2023\n\n\n\n\n\n\n\n\n\n\n\nThe Sweet Hereafter / Russell Banks\n\n\n\nfiction\n\n\n\n\n\n\n\n\n\n\nNov 27, 2023\n\n\n\n\n\n\n\n\n\n\n\nBridge of Clay / Marcus Zusak\n\n\n\nfiction\n\nfavorites\n\n\n\n\n\n\n\n\n\n\nNov 8, 2023\n\n\n\n\n\n\n\n\n\n\n\nHarry Potter / J.K. Rowling\n\n\n\nfiction\n\n\n\n\n\n\n\n\n\n\nNov 5, 2023\n\n\n\n\n\n\n\n\n\n\n\nThe Bean Trees / Barbara Kingsolver\n\n\n\nfiction\n\n\n\n\n\n\n\n\n\n\nNov 5, 2023\n\n\n\n\n\n\n\n\n\n\n\nNever Let Me Go / Kazuo Ishiguro\n\n\n\nfiction\n\n\n\n\n\n\n\n\n\n\nJul 20, 2023\n\n\n\n\n\n\n\n\n\n\n\nCloud Cuckoo Land / Anthony Doerr\n\n\n\n52books23\n\nfiction\n\n\n\n\n\n\n\n\n\n\nJul 20, 2023\n\n\n\n\n\n\n\n\n\n\n\nSkippy Dies / Paul Murray\n\n\n\nfiction\n\n\n\n\n\n\n\n\n\n\nJul 14, 2023\n\n\n\n\n\n\n\n\n\n\n\nIsaac and the Egg / Bobby Palmer\n\n\n\n52books23\n\nfiction\n\n\n\n\n\n\n\n\n\n\nJul 14, 2023\n\n\n\n\n\n\n\n\n\n\n\nBreathing Lessons / Anne Tyler\n\n\n\n52books23\n\nfiction\n\n\n\n\n\n\n\n\n\n\nJul 14, 2023\n\n\n\n\n\n\n\n\n\n\n\nThe Girl Who Kicked the Hornet’s Nest / Stieg Larsson\n\n\n\nfiction\n\n\n\n\n\n\n\n\n\n\nJul 14, 2023\n\n\n\n\n\n\n\n\n\n\n\nA Court of Mist and Fury / Sarah J. Maas\n\n\n\nfiction\n\nfantasy\n\n\n\n\n\n\n\n\n\n\nJul 14, 2023\n\n\n\n\n\n\n\n\n\n\n\nLiar and Spy / Rebecca Stead\n\n\n\nfiction\n\n\n\n\n\n\n\n\n\n\nJul 14, 2023\n\n\n\n\n\n\n\n\n\n\n\nA Court of Thorns and Roses / Sarah J. Maas\n\n\n\nfiction\n\n52books23\n\nfantasy\n\n\n\n\n\n\n\n\n\n\nJul 14, 2023\n\n\n\n\n\n\n\n\n\n\n\nTo Kill a Mockingbird / Harper Lee\n\n\n\nfavorites\n\nfiction\n\n\n\n\n\n\n\n\n\n\nMay 31, 2023\n\n\n\n\n\n\n\n\n\n\n\nSafe Area Goražde / Joe Sacco\n\n\n\n52books23\n\nnon-fiction\n\nhistory\n\n\n\n\n\n\n\n\n\n\nMay 25, 2023\n\n\n\n\n\n\n\n\n\n\n\nLittle Bee / Chris Cleave\n\n\n\nfiction\n\n\n\n\n\n\n\n\n\n\nMay 25, 2023\n\n\n\n\n\n\n\n\n\n\n\nThe Girl Who Played with Fire / Stieg Larsson\n\n\n\n52books23\n\nfiction\n\n\n\n\n\n\n\n\n\n\nMay 18, 2023\n\n\n\n\n\n\n\n\n\n\n\nReproduction / Ian Williams\n\n\n\n52books23\n\nfiction\n\n\n\n\n\n\n\n\n\n\nApr 24, 2023\n\n\n\n\n\n\n\n\n\n\n\nCloud Atlas / David Mitchell\n\n\n\n52books23\n\nfiction\n\n\n\n\n\n\n\n\n\n\nApr 21, 2023\n\n\n\n\n\n\n\n\n\n\n\nDemon Copperhead / Barbara Kingsolver\n\n\n\n52books23\n\nfiction\n\n\n\n\n\n\n\n\n\n\nApr 2, 2023\n\n\n\n\n\n\n\n\n\n\n\nA Thousand Acres / Jane Smiley\n\n\n\n52books23\n\nfiction\n\n\n\n\n\n\n\n\n\n\nMar 19, 2023\n\n\n\n\n\n\n\n\n\n\n\nSay Nothing / Patrick Radden Keefe\n\n\n\n52books23\n\nhistory\n\nnon-fiction\n\n\n\n\n\n\n\n\n\n\nMar 16, 2023\n\n\n\n\n\n\n\n\n\n\n\nThe Spirit Catches You and You Fall Down / Anne Fadiman\n\n\n\n52books23\n\nnon-fiction\n\n\n\n\n\n\n\n\n\n\nFeb 28, 2023\n\n\n\n\n\n\n\n\n\n\n\nThe House in the Cerulean Sea / TJ Klune\n\n\n\nfavorites\n\nfiction\n\n\n\n\n\n\n\n\n\n\nFeb 14, 2023\n\n\n\n\n\n\n\n\n\n\n\nBecoming / Michelle Obama\n\n\n\nnon-fiction\n\nbiography\n\n\n\n\n\n\n\n\n\n\nFeb 6, 2023\n\n\n\n\n\n\n\n\n\n\n\nThe Healing of America / T. R. Reid\n\n\n\n52books23\n\nnon-fiction\n\n\n\n\n\n\n\n\n\n\nFeb 6, 2023\n\n\n\n\n\n\n\n\n\n\n\nWhat the Fireflies Knew / Kai Harris\n\n\n\nfiction\n\n\n\n\n\n\n\n\n\n\nFeb 6, 2023\n\n\n\n\n\n\n\n\n\n\n\nTomorrow, and Tomorrow, and Tomorrow / Gabrielle Zevin\n\n\n\n52books23\n\nfiction\n\n\n\n\n\n\n\n\n\n\nFeb 6, 2023\n\n\n\n\n\n\n\n\n\n\n\nBel Canto / Ann Patchett\n\n\n\n52books23\n\nfiction\n\n\n\n\n\n\n\n\n\n\nFeb 5, 2023\n\n\n\n\n\n\nNo matching items\n\n  \n\n Back to top"
+  },
+  {
+    "objectID": "books/acotar/index.html",
+    "href": "books/acotar/index.html",
+    "title": "A Court of Thorns and Roses / Sarah J. Maas",
+    "section": "",
+    "text": "finished 6/4/23\nthis book was one i had resisted reading for a long time because it’s so controversial and didn’t really seem like something up my alley. i really did not like feyre (also how tf do you say that name) - she just made everything worse and generally was just a whiner. there were definitely some parts that were good plot-wise and the villain was fantastic, but overall i skimmed this one.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "books/athousandacres/index.html",
+    "href": "books/athousandacres/index.html",
+    "title": "A Thousand Acres / Jane Smiley",
+    "section": "",
+    "text": "finished 3/18/23\ncontrary to what i assumed based on the author’s last name, this is not a happy book. i do understand why it won a pulitzer though- the writing is stunning and the characters (sans narrator) are so grossly horrible to each other in these intensely personal and pointed ways, which just proves the strength of smiley’s writing. makes me appreciate my own sisters and that i haven’t ever been mad enough to construct a premeditated murder plot based off of sausages in a jar.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "books/beantrees/index.html",
+    "href": "books/beantrees/index.html",
+    "title": "The Bean Trees / Barbara Kingsolver",
+    "section": "",
+    "text": "finished 10/24/23\nmothers and daughters and the love between them. another brilliant one from barbara kingsolver.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "books/beforethecoffeegetscold/index.html",
+    "href": "books/beforethecoffeegetscold/index.html",
+    "title": "Before the coffee gets cold / Toshikazu Kawaguchi",
+    "section": "",
+    "text": "finished 1/17/24\naunt jody got me this one for christmas this year, and it was a really great read! it’s almost told in 4 different mini stories, but they all have the same base characters, which carries a nice continuity through the stories. mostly it’s just about people and their grief and how they choose to heal from it in very human ways. i wish i could read japanese, because i’m sure reading it without the barrier of translation is beautiful.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "books/boysintheboat/index.html",
+    "href": "books/boysintheboat/index.html",
+    "title": "The Boys in the Boat / Daniel James Brown",
+    "section": "",
+    "text": "finished 4/23/24 - really want to watch the movie now - a little bit sappy, but a wicked story overall - super interesting to learn more about the 1936 Olympics under Hitler, and all of the insane propaganda and lying that was going on during the games - loved that the crew continued to get together to row on the 10 year anniversaries of their win\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "books/bridgeofclay/index.html",
+    "href": "books/bridgeofclay/index.html",
+    "title": "Bridge of Clay / Marcus Zusak",
+    "section": "",
+    "text": "finished 11/8/23\nit’s lyrical and masterful, a lot like singing or riding a horse or telling a story, there’s a rhythm to it, it ebbs and flows. cried through the last 50 pages, made me feel boneless. god i love my family. the writing can make the story a bit confusing to follow, but it’s tragic and brilliant anyways. reminded me of this music: - gregory alan isakov (artist) - the bride and the bachelor / magnolian - girl in calico live with skylightcity string quartet / tow’rs\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "books/cloudcuckooland/index.html",
+    "href": "books/cloudcuckooland/index.html",
+    "title": "Cloud Cuckoo Land / Anthony Doerr",
+    "section": "",
+    "text": "finished 7/16/23\ni really liked this one- mama said she didn’t like it so much because there wasn’t really a moral or something obvious to get out of it, which i think is why i really liked it. it was just a story about people telling stories, and there wasn’t any greater meaning that was being forced down my throat. also i love the name and the story cloud cuckoo land is really pretty funny. omeir’s oxen moonlight and tree broke my heart.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "books/dunemessiah/index.html",
+    "href": "books/dunemessiah/index.html",
+    "title": "Dune Messiah / Frank Herbert",
+    "section": "",
+    "text": "finished 5/3/24\nthis was tricky to get into because i had forgotten a lot of what happened in Dune, and was getting confused between the movies and the book. also i was confused because it starts after the 12 year jihad, which Paul literally spent all of the first book talking about preventing, and then this book started and was like “ok the jihad happened and billions of people died and Paul is Emperor ok go.” but overall i really liked it- i liked that Paul becomes more of a villain and the dynamic of group that is trying to kill him (they all kind of hate each other which was pretty funny even though the dictatorship wins in the end and they are all killed) and the plot was really enticing. was skeptical at first because the jihad was just kind of glossed over within the first couple chapters (it is revisited more in the rest of the book) and it seemed like a big thing to skip, but i can see why it wasn’t super relevant to include all the gory details after reading the whole book. good read!\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "books/foundryside/index.html",
+    "href": "books/foundryside/index.html",
+    "title": "Foundryside / Robert Jackson Bennett",
+    "section": "",
+    "text": "finished 11/5/24\nthis was literally about a talking key named clef. kind of got better at the end? pretty dumb, but at least the magic portion was creative.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "books/harrypotter/index.html",
+    "href": "books/harrypotter/index.html",
+    "title": "Harry Potter / J.K. Rowling",
+    "section": "",
+    "text": "been re-reading the harry potter series in an attempt to get out of my reading slump. just going to plop all of the reviews on one page here because seven hp pages seemed excessive.\nHarry Potter and the Sorcerer’s Stone\nso much fun- I really forgot how enjoyable these are to read.\nHarry Potter and the Chamber of Secrets\nsnake\nHarry Potter and the Prisoner of Azkaban\nbuckbeak + hagrid = &lt;3\nHarry Potter and the Goblet of Fire\nhermione’s dress is blue!! riot.\nHarry Potter and the Order of the Phoenix\ngod harry is such a little whiner in this one it’s unbearable.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "books/ifwewerevillains/index.html",
+    "href": "books/ifwewerevillains/index.html",
+    "title": "If We Were Villains / M.L. Rio",
+    "section": "",
+    "text": "finished 6/7/25\na couple of things: - i did not know enough about shakespeare to fully appreciate this book i think - really like this whole dark academia genre the more i read it - an interesting look at how distorted our sense of reality can become when we are so immersed in a single thing, with a small group of people also completely devoted to the same topic - writing was really good, i liked how the entire thing was formatted/written like a play - title is a bit misleading? they are villains?\n4/5\n\n\n\n Back to top"
   },
   {
     "objectID": "books/killersoftheflowermoon/index.html",
@@ -574,88 +588,95 @@
     "text": "finished 4/26/25\noh i cried like a little baby. GORGEOUS writing. this is not a book about birds, but a book about mothers and daughters and wandering until you get home and loving someone where they are at.\n\n\n\n Back to top"
   },
   {
-    "objectID": "books/nexus/index.html",
-    "href": "books/nexus/index.html",
-    "title": "Nexus: A Brief History of Information Networks from the Stone Age to AI / Yuval Noah Harari",
+    "objectID": "books/neverletmego/index.html",
+    "href": "books/neverletmego/index.html",
+    "title": "Never Let Me Go / Kazuo Ishiguro",
     "section": "",
-    "text": "finished 2/9/2025\nreally fascinating read. sometimes yuval just likes the sound of his own writing, so if you can look past that to the actual info, there is some pretty interesting stuff in here about information networks and how to actually get to the truth of something. also a really good history lesson on how important the internet and instant communication has become for our current government and societal structures as compared to when dissemination of information was slower and analog.\n\n\n\n Back to top"
+    "text": "finished 7/20/23\ni was really excited about this one because i have been meaning to read Kazuo Ishiguro’s stuff for awhile. this book really caught me off guard- the writing is really casual and then just throws in details like that the kids are being raised to donate their organs or that they are cloned from other people. overall i really liked it!\n\n\n\n Back to top"
   },
   {
-    "objectID": "books/reproduction/index.html",
-    "href": "books/reproduction/index.html",
-    "title": "Reproduction / Ian Williams",
+    "objectID": "books/ourhideousprogeny/index.html",
+    "href": "books/ourhideousprogeny/index.html",
+    "title": "Our Hideous Progeny / C. E. McGill",
     "section": "",
-    "text": "finished 4/24/23\nall of the men were assholes in this book. there was a thing one of the characters brought up which was “contributing to the GDP of the house” and it was pretty funny because he was 36, in a serious amount of debt and living in his mom’s basement. you can tell a poet wrote this book. i like the switchups of narrative style, and there were a lot of plot points that came by surprise which was cool. the last section was a slog to get through, just because of the writing style, but damn did it make me think about how i consider families and love as intertwined concepts, and maybe they aren’t always in a matrix? i dunno\n\n\n\n Back to top"
+    "text": "finished 2/24/24\nthis was a really interesting one- i don’t think it’s one i ever would have picked out for myself, but mama got it for me for christmas and the cover art is wicked cool (but don’t judge a book by it’s cover) so i gave it a shot. it’s inspired by frankenstein and is about a woman and her idiot husband and the woman discovers her great-uncle’s research where he made a man come alive. mary and her dummy husband are both geologists and decide to try this on a plesiosaurus because why not and that’s the story. but also it’s about mary and her miscarriage and being a woman in the mid 19th century and having no autonomy or voice in a conversation and also it’s queer and mary has a thing for her stupid husband’s sister and it’s about grief and letting go of the things you love or once loved. i never watched that movie the way of water but based on the trailers i kind of imagined the Creature like the thing from that movie. i don’t know i really liked it because it didn’t try too hard to be something it wasn’t.\n\n\n\n Back to top"
   },
   {
-    "objectID": "books/saynothing/index.html",
-    "href": "books/saynothing/index.html",
-    "title": "Say Nothing / Patrick Radden Keefe",
+    "objectID": "books/safeareagorazde/index.html",
+    "href": "books/safeareagorazde/index.html",
+    "title": "Safe Area Goražde / Joe Sacco",
     "section": "",
-    "text": "finished 3/12/23\na book has never made me feel so un-informed (is that a word?). the Troubles were, and continue to be, such a tragedy for all of Ireland, and the people who were directly affected will carry it forever. there was no sugarcoating of anything, or pretending it wasn’t as bad as it was. i am really interested to see what becomes of the Belfast Project at Boston College - it was such a fascinating idea that ended up going completely awry. anyways, this piece of history is a huge can of worms and i think i’ve got a lot more reading to do about it but this book is phenomenally done.\n\n\n\n Back to top"
+    "text": "finished 5/15/23\nlearned a ton from this book about the war in Bosnia and all of the horrifying things that happened during it. the art and writing style is so well done, and doesn’t romanticize any of the tragedies, but rather humanizes it all.\n\n\n\n Back to top"
   },
   {
-    "objectID": "books/skippydies/index.html",
-    "href": "books/skippydies/index.html",
-    "title": "Skippy Dies / Paul Murray",
+    "objectID": "books/shantaram/index.html",
+    "href": "books/shantaram/index.html",
+    "title": "Shantaram / Gregory David Roberts",
     "section": "",
-    "text": "finished 7/7/23\nthis one was a long one (&gt;600 pgs), but very glad i read it. super funny and addresses the lives of teenagers and kids in a really honest way. the language the author uses to write the dialogue of the boys is so genuine and hilarious and the characters are so well developed. gets pretty sad at the end (spoiler: skippy does die) but it’s handled with grace and truth. fantastic read.\n\n\n\n Back to top"
+    "text": "finished 4/12/25\ngot to love an adventure story. one of those books that makes you really wonder what of it is true in terms of what actually happened, or true in the sense that the story evokes emotions that are truthful to the actual event. definitely glad i stuck with it through the slow parts, because the things that happen at the end are crazy. i looked up my guy gregory and now he’s busy posting weird psychedelic edits to his songs on instagram, so go him i guess. seems like prison is at least a great place to write about what got you in there, because this book turned out pretty good. it’s about community and personal imperfections and how you can still be a good person even if you have done bad things and continue to do bad things if you are doing them for the right reasons. and also about how to escape from prison. and how to get into illegal passport production.\n\n\n\n Back to top"
   },
   {
-    "objectID": "books/talkingatnight/index.html",
-    "href": "books/talkingatnight/index.html",
-    "title": "Talking at Night / Claire Daverly",
+    "objectID": "books/somewherebeyondthesea/index.html",
+    "href": "books/somewherebeyondthesea/index.html",
+    "title": "Somewhere Beyond the Sea / T.J. Klune",
     "section": "",
-    "text": "finished 5/30/25\ngosh this was really well done. the language was beautiful and i loved the story- the relationship between will and rosie feels genuine and you can feel the ache. really liked it.\n4/5\n\n\n\n Back to top"
+    "text": "finished 9/16/24 \\ (sequel to The House in the Cerulean Sea) sorry this book was sickeningly good. i love every character (except the bad ones), they are all so funny and endearing and lifelike and even though it was sappy at times god it was so good.\n\n\n\n Back to top"
   },
   {
-    "objectID": "books/thefivepeopleyoumeetinheaven/index.html",
-    "href": "books/thefivepeopleyoumeetinheaven/index.html",
-    "title": "The Five People You Meet in Heaven / Mitch Albom",
+    "objectID": "books/thedictionaryoflostwords/index.html",
+    "href": "books/thedictionaryoflostwords/index.html",
+    "title": "The Dictionary of Lost Words",
     "section": "",
-    "text": "finished 4/20/25\na sweet book. be kind to the people you meet. gruesome death for such a sentimental book.\n\n\n\n Back to top"
+    "text": "finished 1/31/24 i really liked this one! the language was so beautiful, and the feminist themes were really well expounded upon. the extreme challenges of being a working woman in the late 19th - early 20th century were presented just subtly enough to get the point across without having to be blatant about the themes she was addressing. i thought the plot was beautiful, and it was really interesting to learn about the making of the first dictionary also.\n\n\n\n Back to top"
   },
   {
-    "objectID": "books/thegirlwhokickedthehornetsnest/index.html",
-    "href": "books/thegirlwhokickedthehornetsnest/index.html",
-    "title": "The Girl Who Kicked the Hornet’s Nest / Stieg Larsson",
+    "objectID": "books/thefury/index.html",
+    "href": "books/thefury/index.html",
+    "title": "The Fury / Alex Michaelides",
     "section": "",
-    "text": "finished 6/30/23\nJust as good as the other two- this one definitely has more characters and storylines to keep track of, but it was still awesome. lots of spying and crime and intrigue, very fun.\n\n\n\n Back to top"
+    "text": "finished 4/15/25\nooh scary winddddd. a very agatha christie mystery with a touch of modern theatrical people and some ill-timed practical jokes. a very unreliable narrator. very predictable but a fun read nonetheless.\n\n\n\n Back to top"
   },
   {
-    "objectID": "books/thegodofsmallthings/index.html",
-    "href": "books/thegodofsmallthings/index.html",
-    "title": "The God of Small Things / Arundhati Roy",
+    "objectID": "books/thegirlwhoplayedwithfire/index.html",
+    "href": "books/thegirlwhoplayedwithfire/index.html",
+    "title": "The Girl Who Played with Fire / Stieg Larsson",
     "section": "",
-    "text": "finished 4/6/24\nhey what? to be fair (to be fairrrrr) i did pick this up from goodwill without reading the blurb or reading anything about it online. here are my thoughts in bullet point format - wtf - was not prepped for the sexual assault of a minor in the third chapter - kind of hard to track the plot sometimes because the language is languishing and exploratory and feels meandering - but also the language is beautiful? “the god of small things” god what a beautiful phrase - loved the unconventional capitalized phrases - devastating and upsetting - good i think - need to think more about it - political pieces are very interesting - realized I know next to nothing about the politcal plane of India in the late 60s post British liberation\n\n\n\n Back to top"
+    "text": "finished 5/2/23\nloved it- it had crime, murder, pro boxers and computer hacking. what more could you ask for?\n\n\n\n Back to top"
   },
   {
-    "objectID": "books/thehouseintheceruleansea/index.html",
-    "href": "books/thehouseintheceruleansea/index.html",
-    "title": "The House in the Cerulean Sea / TJ Klune",
+    "objectID": "books/thehealingofamerica/index.html",
+    "href": "books/thehealingofamerica/index.html",
+    "title": "The Healing of America / T. R. Reid",
     "section": "",
-    "text": "finished (third reread) 2/11/23\nThis stupid book. 10 out of 5.\n\n\n\n Back to top"
+    "text": "finished 1/24/23\nMakes you do some big thinking about the selfishness of US government. I really liked Reid’s approach of first researching and getting first hand experience with health care systems of other nations that are comparable to the US in other metrics, and then broaching the topic of actually reforming our health care system- I thought it was well thought out and researched, and provided realistic suggestions for action. Also, the dedication really sticks it to people who argue that we shouldn’t take inspiration from other countries, which is pretty fun.\n\n\n\n Back to top"
   },
   {
-    "objectID": "books/thememoirsofstockholmsven/index.html",
-    "href": "books/thememoirsofstockholmsven/index.html",
-    "title": "The Memoirs of Stockholm Sven / Nathaniel Ian Miller",
+    "objectID": "books/theinvisiblemountain/index.html",
+    "href": "books/theinvisiblemountain/index.html",
+    "title": "The Invisible Mountain / Carolina De Robertis",
     "section": "",
-    "text": "finished 5/23/24 \\ I have never really read a story like this. The setting and environment was so unique, and in an area i had never even heard of, which was so fascinating to learn about. also i just liked that the story wasn’t about one romantic relationship, or someone’s life’s mission, but was more about a life lived learning about companionship and isolation and how to be a person. just a really singular and unique story- really loved it.\nalso should i go on the Arctic Circle Expeditionary Program?? (https://thearcticcircle.org/)\n\n\n\n Back to top"
+    "text": "finished 6/1/25\nlisten you’re gonna get me everytime with a multigenerational magical realism type beat. every time. women are so strong, it makes me sad. female friendships are necessary and beautiful. a love letter to uruguay, sweeping and haunting. the only part that frustrated me was that it went on a little too long, and i didn’t feel like salome’s (love that name also) commitment to the tupamaros was completely explained, other than that she wanted to feel connected to the world around her and maintain her friendship with leona. overall, really good.\n3.75/5\n\n\n\n Back to top"
   },
   {
-    "objectID": "books/thepoppywar/index.html",
-    "href": "books/thepoppywar/index.html",
-    "title": "The Poppy War / R.F. Kuang",
+    "objectID": "books/theperfectstorm/index.html",
+    "href": "books/theperfectstorm/index.html",
+    "title": "The Perfect Storm / Sebastian Junger",
     "section": "",
-    "text": "finished 4/30/25\nreally dark but written super well. rin becomes kind of irritating, and is clearly lost in her own opportunity for power. will be interesting to see how the rest of the story pans out in the next books (if i get to them lol)\n\n\n\n Back to top"
+    "text": "finished 4/4/24\nfor the sake of honesty, i have read this before, but evidently had forgotten because i didn’t remember that until the third chapter or so. anyways, amazing journalism, it’s a tragic story but the book is so well researched and the story is told very well. I do wish that I had some type of background that had given me boat and ocean and fishing knowledge, because I think I would have understood a ton more, but that’s also partially on me because I didn’t really do a lot (any) looking into terms that were confusing and just sort of relied on context clues to understand what was going on. but anyways, the ocean is insane and I am definitely not destined to be a fisherman on a swordfish boat.\n\n\n\n Back to top"
   },
   {
-    "objectID": "books/thesongofthecell/index.html",
-    "href": "books/thesongofthecell/index.html",
-    "title": "The Song of the Cell / Siddhartha Mukherjee",
+    "objectID": "books/theprincessbride/index.html",
+    "href": "books/theprincessbride/index.html",
+    "title": "The Princess Bride / William Goldman",
     "section": "",
-    "text": "finished 1/14/24\nphenomenal. the blend of his personal stories and experiences with hardcore science, as well as the lyrical language surrounding all of the fascinating history around the discovery of the different parts of the cell is brilliant. i was just as amazed as i was reading The Gene because he is able to craft these intricate and complex scientific histories into dramatic and understandable and riveting stories. loved it.\n\n\n\n Back to top"
+    "text": "finished 3/5/24 - such a fun and silly book - great escapism - much funnier than i anticipated - “my name is inigo montoya. you killed my father. prepare to die.”\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "books/thespiritcatchesyouandyoufalldown/index.html",
+    "href": "books/thespiritcatchesyouandyoufalldown/index.html",
+    "title": "The Spirit Catches You and You Fall Down / Anne Fadiman",
+    "section": "",
+    "text": "finished 2/25/23\nWhat would you do? The parents love their daughter unconditionally the only way they know how, and the doctors want to heal her unrelentlessly the only way they know how. The second to last chapter is called “The Life or the Soul” and that pretty much sums it up. How do you fix a problem created by the fact that no one party is correct- a war of moralities and differences of opinion in which there is no true positive? I think probably the first step is to listen to each other.\n\n\n\n Back to top"
   },
   {
     "objectID": "books/thestoryofthehumanbody/index.html",

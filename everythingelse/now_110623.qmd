@@ -12,4 +12,4 @@ categories:
 - working on recording my workouts in notion
 - journaling again (can't seem to get started though) -> [this guy](https://www.instagram.com/nannisnotes/) has some super cool journals though 
 
-[previous now]({{< ref "now_110523.md" >}})
+[previous now](now_110523.qmd)

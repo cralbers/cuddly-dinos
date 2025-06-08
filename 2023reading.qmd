@@ -15,21 +15,21 @@ been looking for some reading projects and have successfully found a couple! wil
 
 
 
-**1** - book with a subtitle: [Say Nothing: A True Story of Murder and Memory in Northern Ireland](books/saynothing//index.md) \
-**2** - featuring an inheritance: [Reproduction](books/reproduction//index.md) - at least one that's sought after \
-**3** - starts with a G: [The Girl Who Played With Fire](books/girlplayedwithfire//index.md) \
-**4** - starts with an H: [The Healing of America](books/healingofamerica//index.md)  \
-**5** - starts with an I: [Isaac and the Egg](books/isaacandtheegg//index.md)  \
-**6** - under 200 pages: [By the River Piedra I Sat Down and Wept](books/riverpiedra//index.md)  \
-**7** - city or country name in the title: [American Gods](books/americangods//index.md)  \
-**8** - dystopian fiction: [Cloud Atlas](books/cloudatlas//index.md) - one of the storylines is dystopian, so that counts right? \
-**11** - book about secrets: [A Thousand Acres](books/thousandacres//index.md) \
-**12** - high fantasy: [A Court of Thorns and Roses](books/acotar//index.md) \
-**14** - a survival story: [Demon Copperhead](books/demoncopperhead//index.md) \
-**18** - set during a war other than WWI or WWII: [Safe Area Goražde](books/safearea//index.md) \
-**20** - book about siblings: [Bridge of Clay](books/bridgeofclay//index.md) \
-**21** - second-hand book: [The Spirit Catches You and You Fall Down](books/spiritcatchesyou//index.md) - honestly 90% of my books are secondhand so this was an easy one \
-**26** - has an epilogue: [Bel Canto](books/bel_canto//index.md) - it's a garbage one but it's there \
-**28** - includes a funeral: [Breathing Lessons](books/breathinglessons//index.md) \
-**29** - sends you down a rabbit hole: [Tomorrow and Tomorrow and Tomorrow](books/tmrw_cubed//index.md) - maybe i should get into game design \
-**35** - a book you meant to read last year: [Cloud Cuckoo Land](books/cloudcuckoo//index.md) \
+**1** - book with a subtitle: [Say Nothing: A True Story of Murder and Memory in Northern Ireland](books/saynothing//index.qmd) \
+**2** - featuring an inheritance: [Reproduction](books/reproduction//index.qmd) - at least one that's sought after \
+**3** - starts with a G: [The Girl Who Played With Fire](books/girlplayedwithfire//index.qmd) \
+**4** - starts with an H: [The Healing of America](books/healingofamerica//index.qmd)  \
+**5** - starts with an I: [Isaac and the Egg](books/isaacandtheegg//index.qmd)  \
+**6** - under 200 pages: [By the River Piedra I Sat Down and Wept](books/riverpiedra//index.qmd)  \
+**7** - city or country name in the title: [American Gods](books/americangods//index.qmd)  \
+**8** - dystopian fiction: [Cloud Atlas](books/cloudatlas//index.qmd) - one of the storylines is dystopian, so that counts right? \
+**11** - book about secrets: [A Thousand Acres](books/thousandacres//index.qmd) \
+**12** - high fantasy: [A Court of Thorns and Roses](books/acotar//index.qmd) \
+**14** - a survival story: [Demon Copperhead](books/demoncopperhead//index.qmd) \
+**18** - set during a war other than WWI or WWII: [Safe Area Goražde](books/safearea//index.qmd) \
+**20** - book about siblings: [Bridge of Clay](books/bridgeofclay//index.qmd) \
+**21** - second-hand book: [The Spirit Catches You and You Fall Down](books/spiritcatchesyou//index.qmd) - honestly 90% of my books are secondhand so this was an easy one \
+**26** - has an epilogue: [Bel Canto](books/bel_canto//index.qmd) - it's a garbage one but it's there \
+**28** - includes a funeral: [Breathing Lessons](books/breathinglessons//index.qmd) \
+**29** - sends you down a rabbit hole: [Tomorrow and Tomorrow and Tomorrow](books/tmrw_cubed//index.qmd) - maybe i should get into game design \
+**35** - a book you meant to read last year: [Cloud Cuckoo Land](books/cloudcuckoo//index.qmd) \

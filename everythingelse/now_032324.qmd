@@ -16,4 +16,4 @@ categories:
 - my hands are so cold
 
 
-[previous now]({{< ref "now_012324.md" >}})
+[previous now](now_012324.qmd)

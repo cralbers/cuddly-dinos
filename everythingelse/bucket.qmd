@@ -9,7 +9,7 @@ categories:
 ---
 ## things i want to do to fill myself up
 - learn <!-- FM:Snippet:Start data:{"id":"link to file","fields":[{"name":"title","value":"sign language"},{"name":"file","value":"signlanguage"}]} -->
-[ sign language ]({{< ref "signlanguage.md" >}})
+[ sign language ](signlanguage.qmd)
 - learn to play the drums
 - swim with sharks
 - fall in love

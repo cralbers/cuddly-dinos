@@ -31,23 +31,23 @@ draft: false
 
 | Prompt                            | Book                                                                      |
 |-----------------------------------|---------------------------------------------------------------------------|
-| 4. Lowercase letters on the spine | [ Before the coffee gets cold ](books/beforethecoffeegetscold/index.md)    |
-| 7. At least 4 different POV       | [ Let the Great World Spin ](books/letthegreatworldspin/index.md)          |
-| 8. Features the ocean       | [ The Perfect Storm ](books/theperfectstorm/index.md)                            |
-| 9. A character-driven novel       | [ Babel: An Arcane History ](books/babel/index.md)                         |
-| 10. Told in non-chronological order       | [ Educated ](books/educated/index.md)                              |
-| 11. Title starting with the letter "K"  | [ Killers of the Flower Moon ](books/killersoftheflowermoon.md">}}) |
-| 25. An author "everyone" has read except you     | [ Dune Messiah ](books/dunemessiah/index.md)                |
-| 26. Hybrid genre                  | [ The Complete Maus ](books/maus/index.md)                                 |
-| 28. A yellow spine                  | [ Somewhere Beyond the Sea ](books/somewherebeyondthesea/index.md)       |
-| 30. Picked without reading the blurb    | [ The God of Small Things ](books/godofsmallthings.md">}})          |
-| 36. Has futuristic technology      | [ Foundryside ](books/foundryside/index.md)                               |
-| 38. Published by Hachette    | [ The Memoirs of Stockholm Sven ](books/thememoirsofstockholmsven.md">}})      |
-| 41. A sticker on the cover   | [ Tom Lake ](books/tomlake/index.md)                                            |
-| 43. About finding identity            | [ The Boys in the Boat ](books/boysintheboat.md">}})                  |
-| 44. Includes a wedding            | [ The Princess Bride ](books/princessbride.md">}})                        |
-| 45. Chapter headings have dates   | [ The Dictionary of Lost Words ](books/dictionaryoflostwords/index.md)     |
-| 50. A musical instrument on the cover   | [ King Zeno ](books/kingzeno/index.md)                               |
+| 4. Lowercase letters on the spine | [ Before the coffee gets cold ](books/beforethecoffeegetscold/index.qmd)    |
+| 7. At least 4 different POV       | [ Let the Great World Spin ](books/letthegreatworldspin/index.qmd)          |
+| 8. Features the ocean       | [ The Perfect Storm ](books/theperfectstorm/index.qmd)                            |
+| 9. A character-driven novel       | [ Babel: An Arcane History ](books/babel/index.qmd)                         |
+| 10. Told in non-chronological order       | [ Educated ](books/educated/index.qmd)                              |
+| 11. Title starting with the letter "K"  | [ Killers of the Flower Moon ](books/killersoftheflowermoon.qmd">}}) |
+| 25. An author "everyone" has read except you     | [ Dune Messiah ](books/dunemessiah/index.qmd)                |
+| 26. Hybrid genre                  | [ The Complete Maus ](books/maus/index.qmd)                                 |
+| 28. A yellow spine                  | [ Somewhere Beyond the Sea ](books/somewherebeyondthesea/index.qmd)       |
+| 30. Picked without reading the blurb    | [ The God of Small Things ](books/godofsmallthings.qmd">}})          |
+| 36. Has futuristic technology      | [ Foundryside ](books/foundryside/index.qmd)                               |
+| 38. Published by Hachette    | [ The Memoirs of Stockholm Sven ](books/thememoirsofstockholmsven.qmd">}})      |
+| 41. A sticker on the cover   | [ Tom Lake ](books/tomlake/index.qmd)                                            |
+| 43. About finding identity            | [ The Boys in the Boat ](books/boysintheboat.qmd">}})                  |
+| 44. Includes a wedding            | [ The Princess Bride ](books/princessbride.qmd">}})                        |
+| 45. Chapter headings have dates   | [ The Dictionary of Lost Words ](books/dictionaryoflostwords/index.qmd)     |
+| 50. A musical instrument on the cover   | [ King Zeno ](books/kingzeno/index.qmd)                               |
 
 
 
@@ -55,28 +55,28 @@ draft: false
 *books for this challenge are tagged with #abc24*
 
 A. \
-B. [ Before the coffee gets cold ](books/beforethecoffeegetscold/index.md) \
+B. [ Before the coffee gets cold ](books/beforethecoffeegetscold/index.qmd) \
 C. \
-D. [ The Dictionary of Lost Words ](books/dictionaryoflostwords/index.md) \
-E. [ Educated ](books/educated/index.md) \
-F. [ Foundryside ](books/foundryside/index.md) \
-G. [ The God of Small Things ](books/godofsmallthings.md">}}) \
+D. [ The Dictionary of Lost Words ](books/dictionaryoflostwords/index.qmd) \
+E. [ Educated ](books/educated/index.qmd) \
+F. [ Foundryside ](books/foundryside/index.qmd) \
+G. [ The God of Small Things ](books/godofsmallthings.qmd">}}) \
 H. \
 I. \
 J. \
-K. [ Killers of the Flower Moon ](books/killersoftheflowermoon/index.md) \
-L. [ Let the Great World Spin ](books/letthegreatworldspin/index.md) \
-M. [ Midnight in the Garden of Good and Evil ](books/midnightinthegardenofgoodandevil/index.md) \
+K. [ Killers of the Flower Moon ](books/killersoftheflowermoon/index.qmd) \
+L. [ Let the Great World Spin ](books/letthegreatworldspin/index.qmd) \
+M. [ Midnight in the Garden of Good and Evil ](books/midnightinthegardenofgoodandevil/index.qmd) \
 N. \
-O. [ Our Hideous Progeny ](books/ourhideousprogeny/index.md) \
+O. [ Our Hideous Progeny ](books/ourhideousprogeny/index.qmd) \
 P. \
 Q. \
 R. \
-S. [ Somewhere Beyond the Sea ](books/somewherebeyondthesea/index.md) \
-T. [ Tom Lake ](books/tomlake/index.md) \
-U. [ Unbroken ](books/unbroken/index.md) \
+S. [ Somewhere Beyond the Sea ](books/somewherebeyondthesea/index.qmd) \
+T. [ Tom Lake ](books/tomlake/index.qmd) \
+U. [ Unbroken ](books/unbroken/index.qmd) \
 V. \
-W. [ Watchmen ](books/watchmen/index.md) \
+W. [ Watchmen ](books/watchmen/index.qmd) \
 X. \
 Y. \
 Z.

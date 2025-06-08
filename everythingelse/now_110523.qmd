@@ -10,4 +10,4 @@ categories:
 
 i don't know anything really
 
-[previous now]({{< ref "now_041623.md" >}})
+[previous now](now_041623.qmd)

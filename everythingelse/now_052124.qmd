@@ -17,4 +17,4 @@ categories:
 - scared
 - sketch and caleb pressley [video](https://www.youtube.com/watch?v=cigru9WYvwI)
 
-[previous now]({{< ref "now_033124.md" >}})
+[previous now](now_033124.qmd)

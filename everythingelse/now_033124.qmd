@@ -16,4 +16,4 @@ categories:
 - i want to throw my phone out the window
 - will i be wanted? what i mean is will someone ever want to hold me? i am too big and want to feel small in that way that makes you feel safe and unexposed
 
-[previous now]({{< ref "now_032324.md" >}})
+[previous now](now_032324.qmd)

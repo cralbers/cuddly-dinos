@@ -9,6 +9,6 @@ categories:
 ---
 - setting up my own compendium cards 
   - [about compendium cards](https://thecompendium.cards/c/about/)
-  - my digi garden resource list [ here ]({{< ref "digital_garden_tools.md" >}})
+  - my digi garden resource list [ here ](digital_garden_tools.qmd)
   - link to github to fork [here](https://github.com/jkomoros/card-web)
 - 

@@ -9,4 +9,4 @@ categories:
 ---
 - was asked about my relationship status the other day- had to say i have never really been into dating and have never been in a commited relationship. "yeah not a lot of time for that while getting a biochemistry degree- you just never been interested in the dating scene or what?" or what.
 
-[previous now]({{< ref "now_110623.md" >}})
+[previous now](now_110623.qmd)

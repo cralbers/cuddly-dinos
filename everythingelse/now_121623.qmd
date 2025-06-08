@@ -14,4 +14,4 @@ categories:
 - country music
 - how hard it can be sometimes to have sisters
 
-[previous now]({{< ref "now_112623.md" >}})
+[previous now](now_112623.qmd)

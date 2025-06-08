@@ -15,4 +15,4 @@ categories:
 - bababooey
 - how stupid git makes me feel because i think if i really took some time to sit down and learn about it it would make sense but i won't and will suffer in stupidity instead
 
-[previous now]({{< ref "now_111023.md" >}})
+[previous now](now_111023.qmd)

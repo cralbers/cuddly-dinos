@@ -14,4 +14,4 @@ categories:
 - work and science and temporary knowledge
 
 
-[previous now]({{< ref "now_052124.md" >}})
+[previous now](now_052124.qmd)

@@ -442,5 +442,14 @@
   },
   "everythingelse/websites.qmd": {
     "websites.html": "53cfdb7a"
+  },
+  "books/ifwewerevillains/index.qmd": {
+    "index.html": "1b2ff4c3"
+  },
+  "books/myyearofrestandrelaxation/index.qmd": {
+    "index.html": "4eb05c2a"
+  },
+  "books/thestoriedlifeofajfikry/index.qmd": {
+    "index.html": "283e37db"
   }
 }
