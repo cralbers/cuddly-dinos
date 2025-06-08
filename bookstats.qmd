@@ -20,14 +20,14 @@ import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-# updated 6-6-25
-fiction = 10
+# updated 6-8-25
+fiction = 11
 nonfiction = 4
 
-abc_read = 8
+abc_read = 9
 abc_unread = 26 - abc_read
 
-fivetwo_read = 7
+fivetwo_read = 8
 fivetwo_unread = 52 - fivetwo_read
 
 ## make fic/non-fic pie chart 
@@ -118,7 +118,7 @@ reading the alphabet
 | f       |                                                           |
 | g       | [Going Clear](books/goingclear/index.qmd)                 |
 | h       | [Hidden Figures](books/hiddenfigures/index.qmd)           |
-| i       |                                                           |
+| i       | [If We Were Villains](books/ifwewerevillains/index.qmd)   |
 | j       |                                                           |
 | k       |                                                           |
 | l       | [Libby Lost and Found](books/libbylostandfound/index.qmd) |
@@ -141,9 +141,9 @@ reading the alphabet
 
 | prompt                                    | book |
 |-------------------------------------------|------|
-| 1\. A pun in the title                    |      |
-| 2\. A character with red hair             |      |
-| 3. Title starts with letter “M”              |      |
+| 1. A pun in the title                    |      |
+| 2. A character with red hair             |      |
+| 3. Title starts with letter “M”           | [My Year of Rest and Relaxation](books/myyearofrestandrelaxation/index.qmd)   |
 | 4. Title starts with letter “N”              | [Nexus](books/nexus/index.qmd)     |
 | 5. Plot includes a heist                     |      |
 | 6. Genre One: Set in Spring                  |      |
